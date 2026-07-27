@@ -1,0 +1,46 @@
+# 编译产物
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.map
+*.out
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# 依赖
+node_modules/
+vendor/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.sln.docstates
+
+# 临时文件
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.local
+
+# 调试
+*.stackdump
+core

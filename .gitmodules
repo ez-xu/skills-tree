@@ -28,3 +28,12 @@
 [submodule "_sources/jinghan-xu-skills"]
 	path = _sources/jinghan-xu-skills
 	url = https://github.com/ez-xu/jinghan-xu-skills.git
+[submodule "_sources/agent-skill-creator"]
+	path = _sources/agent-skill-creator
+	url = https://github.com/FrancyJGLisboa/agent-skill-creator.git
+[submodule "_sources/mattpocock-skills"]
+	path = _sources/mattpocock-skills
+	url = https://github.com/mattpocock/skills.git
+[submodule "_sources/addyosmani-agent-skills"]
+	path = _sources/addyosmani-agent-skills
+	url = https://github.com/addyosmani/agent-skills.git

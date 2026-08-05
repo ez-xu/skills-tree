@@ -90,11 +90,7 @@ for skill in "${EMBED_SKILLS[@]}"; do
     fi
 done
 
-# can-debug 重命名为 usb-can-debug
-src="$EMBED_BASE/can-debug"
-if [ -d "$src" ]; then
-    create_link "usb-can-debug" "$src" "embed-ai-tool/skills/can-debug (→ usb-can-debug)"
-fi
+# usb-can-debug 为独立技能，不从 embed-ai-tool 链接
 
 # ── 3. 同步 orca 技能 ─────────────────────────────────────
 echo ""

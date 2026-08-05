@@ -54,9 +54,6 @@ sources:
       - static-analysis
       - visa-debug
       - workflow
-    aliases:
-      can-debug: usb-can-debug
-
   orca:
     type: submodule
     remote: https://github.com/stablyai/orca.git
@@ -98,7 +95,6 @@ categories:
   embedded:
     label: "🔌 嵌入式"
     description: "固件构建、烧录、调试、通信监控、静态分析"
-    external_only: true
     skills:
       - build-cmake
       - build-iar

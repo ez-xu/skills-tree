@@ -36,8 +36,7 @@ build-idf/
 build-keil/
 build-makefile/
 build-platformio/
-can-debug/
-usb-can-debug/
+# usb-can-debug 为独立技能，纳入版本控制
 debug-gdb-openocd/
 debug-jlink/
 debug-platformio/

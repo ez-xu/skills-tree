@@ -1,0 +1,4 @@
+.skill-forge/
+*.em_skill.json
+__pycache__/
+*.pyc

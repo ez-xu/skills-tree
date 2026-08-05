@@ -71,6 +71,31 @@ sources:
     skills:
       - easyeda-api
 
+  qt-agent-skills:
+    type: submodule
+    remote: https://github.com/TheQtCompanyRnD/agent-skills.git
+    local_dir: _sources/qt-agent-skills
+    skills_dir: skills
+    skills:
+      - qt-cpp-review
+      - qt-ui-design
+
+  hallmark:
+    type: submodule
+    remote: https://github.com/nutlope/hallmark.git
+    local_dir: _sources/hallmark
+    skills_dir: skills/hallmark
+    skills:
+      - hallmark
+
+  skill-forge:
+    type: submodule
+    remote: https://github.com/nekocode/skill-forge.git
+    local_dir: _sources/skill-forge
+    skills_dir: skills/skill-forge
+    skills:
+      - skill-forge
+
   OfficeCLI:
     type: submodule
     remote: https://github.com/iOfficeAI/OfficeCLI.git

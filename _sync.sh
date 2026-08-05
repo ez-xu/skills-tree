@@ -60,7 +60,7 @@ create_link() {
 }
 
 # ── 1. 同步 kicad-happy 技能 ──────────────────────────────
-echo -e "${YELLOW}[1/7]${NC} 链接 kicad-happy 技能..."
+echo -e "${YELLOW}[1/10]${NC} 链接 kicad-happy 技能..."
 
 KICAD_HAPPY_BASE="$SKILLS_DIR/_sources/kicad-happy/skills"
 KICAD_SKILLS=(bom datasheets digikey element14 emc jlcpcb kicad lcsc mouser pcbway spice)
@@ -76,7 +76,7 @@ done
 
 # ── 2. 同步 embed-ai-tool 技能 ────────────────────────────
 echo ""
-echo -e "${YELLOW}[2/7]${NC} 链接 embed-ai-tool 技能..."
+echo -e "${YELLOW}[2/10]${NC} 链接 embed-ai-tool 技能..."
 
 EMBED_BASE="$SKILLS_DIR/_sources/embed-ai-tool/skills"
 EMBED_SKILLS=(build-cmake build-iar build-idf build-keil build-makefile build-platformio debug-gdb-openocd debug-jlink debug-platformio flash-idf flash-jlink flash-keil flash-openocd flash-platformio logic-analyzer memory-analysis modbus-debug rtos-debug serial-monitor serial-shell static-analysis visa-debug workflow)
@@ -92,9 +92,25 @@ done
 
 # usb-can-debug 为独立技能，不从 embed-ai-tool 链接
 
-# ── 3. 同步 orca 技能 ─────────────────────────────────────
+# ── 3. 同步 Qt 技能 ───────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[3/7]${NC} 链接 orca 技能..."
+echo -e "${YELLOW}[3/10]${NC} 链接 Qt 技能..."
+
+QT_BASE="$SKILLS_DIR/_sources/qt-agent-skills/skills"
+QT_SKILLS=(qt-cpp-review qt-ui-design)
+
+for skill in "${QT_SKILLS[@]}"; do
+    src="$QT_BASE/$skill"
+    if [ -d "$src" ]; then
+        create_link "$skill" "$src" "qt-agent-skills/skills/$skill"
+    else
+        echo "  ${RED}✗${NC} $skill: 源路径不存在 $src"
+    fi
+done
+
+# ── 4. 同步 orca 技能 ─────────────────────────────────────
+echo ""
+echo -e "${YELLOW}[4/10]${NC} 链接 orca 技能..."
 
 ORCA_BASE="$SKILLS_DIR/_sources/orca/skills"
 ORCA_SKILLS=(computer-use orca-cli orchestration)
@@ -108,9 +124,9 @@ for skill in "${ORCA_SKILLS[@]}"; do
     fi
 done
 
-# ── 4. 同步 OfficeCLI 技能 ────────────────────────────────
+# ── 5. 同步 OfficeCLI 技能 ────────────────────────────────
 echo ""
-echo -e "${YELLOW}[4/7]${NC} 链接 OfficeCLI 技能..."
+echo -e "${YELLOW}[5/10]${NC} 链接 OfficeCLI 技能..."
 
 OFFICECLI_BASE="$SKILLS_DIR/_sources/OfficeCLI/skills"
 OFFICECLI_SKILLS=(officecli-pptx officecli-docx officecli-xlsx officecli-pitch-deck officecli-financial-model officecli-data-dashboard officecli-word-form officecli-academic-paper morph-ppt morph-ppt-3d)
@@ -124,9 +140,20 @@ for skill in "${OFFICECLI_SKILLS[@]}"; do
     fi
 done
 
-# ── 3. 同步 easyeda-api submodule ─────────────────────────
+# ── 6. 同步 hallmark 技能 ──────────────────────────────────
 echo ""
-echo -e "${YELLOW}[5/7]${NC} 同步 easyeda-api submodule..."
+echo -e "${YELLOW}[6/10]${NC} 链接 hallmark 技能..."
+
+HALLMARK_SRC="$SKILLS_DIR/_sources/hallmark/skills/hallmark"
+if [ -d "$HALLMARK_SRC" ]; then
+    create_link "hallmark" "$HALLMARK_SRC" "hallmark/skills/hallmark"
+else
+    echo "  ${RED}✗${NC} hallmark: 源路径不存在 $HALLMARK_SRC"
+fi
+
+# ── 7. 同步 easyeda-api submodule ─────────────────────────
+echo ""
+echo -e "${YELLOW}[7/10]${NC} 同步 easyeda-api submodule..."
 
 EASYEDA_SRC="_sources/easyeda-api-skill"
 if [ -d "$EASYEDA_SRC" ]; then
@@ -136,9 +163,20 @@ else
     echo "  ${YELLOW}⚠${NC} $EASYEDA_SRC 不存在，请先: git submodule update --init"
 fi
 
-# ── 3. 校验所有技能 ──────────────────────────────────────
+# ── skill-forge ─────────────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[6/7]${NC} 校验技能完整性..."
+echo -e "${YELLOW}[8/10]${NC} 链接 skill-forge 技能..."
+
+SKILLFORGE_SRC="$SKILLS_DIR/_sources/skill-forge/skills/skill-forge"
+if [ -d "$SKILLFORGE_SRC" ]; then
+    create_link "skill-forge" "$SKILLFORGE_SRC" "skill-forge/skills/skill-forge"
+else
+    echo "  ${RED}✗${NC} skill-forge: 源路径不存在 $SKILLFORGE_SRC"
+fi
+
+# ── 9. 校验所有技能 ──────────────────────────────────────
+echo ""
+echo -e "${YELLOW}[9/10]${NC} 校验技能完整性..."
 
 total=0
 missing=0
@@ -169,9 +207,9 @@ else
     echo -e "  ${RED}$missing/$total 个技能缺失${NC}"
 fi
 
-# ── 4. 生成 _tree.md ─────────────────────────────────────
+# ── 10. 生成 _tree.md ────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[7/7]${NC} 生成 _tree.md..."
+echo -e "${YELLOW}[10/10]${NC} 生成 _tree.md..."
 
 cat > _tree.md << 'TREEHEADER'
 # 🌳 Skills Tree

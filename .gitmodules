@@ -16,3 +16,12 @@
 [submodule "_sources/orca"]
 	path = _sources/orca
 	url = https://github.com/stablyai/orca.git
+[submodule "_sources/qt-agent-skills"]
+	path = _sources/qt-agent-skills
+	url = https://github.com/TheQtCompanyRnD/agent-skills.git
+[submodule "_sources/hallmark"]
+	path = _sources/hallmark
+	url = https://github.com/nutlope/hallmark.git
+[submodule "_sources/skill-forge"]
+	path = _sources/skill-forge
+	url = https://github.com/nekocode/skill-forge.git

@@ -60,6 +60,16 @@ computer-use/
 orca-cli/
 orchestration/
 
+# Qt 系列 → _sources/qt-agent-skills/skills/
+qt-cpp-review/
+qt-ui-design/
+
+# hallmark → _sources/hallmark/skills/hallmark/
+hallmark/
+
+# skill-forge → _sources/skill-forge/skills/skill-forge/
+skill-forge/
+
 # 内部管理目录
 _sources/
 _tree.md

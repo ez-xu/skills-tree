@@ -25,6 +25,48 @@ sources:
       - pcbway
       - spice
 
+  embed-ai-tool:
+    type: submodule
+    remote: https://github.com/LeoKemp223/embed-ai-tool.git
+    local_dir: _sources/embed-ai-tool
+    skills_dir: skills
+    skills:
+      - build-cmake
+      - build-iar
+      - build-idf
+      - build-keil
+      - build-makefile
+      - build-platformio
+      - debug-gdb-openocd
+      - debug-jlink
+      - debug-platformio
+      - flash-idf
+      - flash-jlink
+      - flash-keil
+      - flash-openocd
+      - flash-platformio
+      - logic-analyzer
+      - memory-analysis
+      - modbus-debug
+      - rtos-debug
+      - serial-monitor
+      - serial-shell
+      - static-analysis
+      - visa-debug
+      - workflow
+    aliases:
+      can-debug: usb-can-debug
+
+  orca:
+    type: submodule
+    remote: https://github.com/stablyai/orca.git
+    local_dir: _sources/orca
+    skills_dir: skills
+    skills:
+      - computer-use
+      - orca-cli
+      - orchestration
+
   easyeda-api:
     type: submodule
     remote: https://github.com/easyeda/easyeda-api-skill.git
@@ -56,6 +98,7 @@ categories:
   embedded:
     label: "🔌 嵌入式"
     description: "固件构建、烧录、调试、通信监控、静态分析"
+    external_only: true
     skills:
       - build-cmake
       - build-iar
@@ -71,7 +114,7 @@ categories:
       - debug-gdb-openocd
       - debug-jlink
       - debug-platformio
-      - can-debug
+      - usb-can-debug
       - modbus-debug
       - rtos-debug
       - serial-monitor
@@ -130,6 +173,7 @@ categories:
   infra:
     label: "🛠️ 基础设施"
     description: "技能管理、桌面自动化、多智能体编排"
+    external_only: true
     skills:
       - skill-forge
       - shared

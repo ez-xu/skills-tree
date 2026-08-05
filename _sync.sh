@@ -60,7 +60,7 @@ create_link() {
 }
 
 # ── 1. 同步 kicad-happy 技能 ──────────────────────────────
-echo -e "${YELLOW}[1/5]${NC} 链接 kicad-happy 技能..."
+echo -e "${YELLOW}[1/7]${NC} 链接 kicad-happy 技能..."
 
 KICAD_HAPPY_BASE="$SKILLS_DIR/_sources/kicad-happy/skills"
 KICAD_SKILLS=(bom datasheets digikey element14 emc jlcpcb kicad lcsc mouser pcbway spice)
@@ -74,9 +74,47 @@ for skill in "${KICAD_SKILLS[@]}"; do
     fi
 done
 
-# ── 2. 同步 OfficeCLI 技能 ────────────────────────────────
+# ── 2. 同步 embed-ai-tool 技能 ────────────────────────────
 echo ""
-echo -e "${YELLOW}[2/5]${NC} 链接 OfficeCLI 技能..."
+echo -e "${YELLOW}[2/7]${NC} 链接 embed-ai-tool 技能..."
+
+EMBED_BASE="$SKILLS_DIR/_sources/embed-ai-tool/skills"
+EMBED_SKILLS=(build-cmake build-iar build-idf build-keil build-makefile build-platformio debug-gdb-openocd debug-jlink debug-platformio flash-idf flash-jlink flash-keil flash-openocd flash-platformio logic-analyzer memory-analysis modbus-debug rtos-debug serial-monitor serial-shell static-analysis visa-debug workflow)
+
+for skill in "${EMBED_SKILLS[@]}"; do
+    src="$EMBED_BASE/$skill"
+    if [ -d "$src" ]; then
+        create_link "$skill" "$src" "embed-ai-tool/skills/$skill"
+    else
+        echo "  ${RED}✗${NC} $skill: 源路径不存在 $src"
+    fi
+done
+
+# can-debug 重命名为 usb-can-debug
+src="$EMBED_BASE/can-debug"
+if [ -d "$src" ]; then
+    create_link "usb-can-debug" "$src" "embed-ai-tool/skills/can-debug (→ usb-can-debug)"
+fi
+
+# ── 3. 同步 orca 技能 ─────────────────────────────────────
+echo ""
+echo -e "${YELLOW}[3/7]${NC} 链接 orca 技能..."
+
+ORCA_BASE="$SKILLS_DIR/_sources/orca/skills"
+ORCA_SKILLS=(computer-use orca-cli orchestration)
+
+for skill in "${ORCA_SKILLS[@]}"; do
+    src="$ORCA_BASE/$skill"
+    if [ -d "$src" ]; then
+        create_link "$skill" "$src" "orca/skills/$skill"
+    else
+        echo "  ${RED}✗${NC} $skill: 源路径不存在 $src"
+    fi
+done
+
+# ── 4. 同步 OfficeCLI 技能 ────────────────────────────────
+echo ""
+echo -e "${YELLOW}[4/7]${NC} 链接 OfficeCLI 技能..."
 
 OFFICECLI_BASE="$SKILLS_DIR/_sources/OfficeCLI/skills"
 OFFICECLI_SKILLS=(officecli-pptx officecli-docx officecli-xlsx officecli-pitch-deck officecli-financial-model officecli-data-dashboard officecli-word-form officecli-academic-paper morph-ppt morph-ppt-3d)
@@ -92,7 +130,7 @@ done
 
 # ── 3. 同步 easyeda-api submodule ─────────────────────────
 echo ""
-echo -e "${YELLOW}[3/5]${NC} 同步 easyeda-api submodule..."
+echo -e "${YELLOW}[5/7]${NC} 同步 easyeda-api submodule..."
 
 EASYEDA_SRC="_sources/easyeda-api-skill"
 if [ -d "$EASYEDA_SRC" ]; then
@@ -104,7 +142,7 @@ fi
 
 # ── 3. 校验所有技能 ──────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[4/5]${NC} 校验技能完整性..."
+echo -e "${YELLOW}[6/7]${NC} 校验技能完整性..."
 
 total=0
 missing=0
@@ -137,7 +175,7 @@ fi
 
 # ── 4. 生成 _tree.md ─────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[5/5]${NC} 生成 _tree.md..."
+echo -e "${YELLOW}[7/7]${NC} 生成 _tree.md..."
 
 cat > _tree.md << 'TREEHEADER'
 # 🌳 Skills Tree

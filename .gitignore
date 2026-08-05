@@ -29,6 +29,38 @@ officecli-academic-paper/
 morph-ppt/
 morph-ppt-3d/
 
+# embed-ai-tool 系列 → _sources/embed-ai-tool/skills/
+build-cmake/
+build-iar/
+build-idf/
+build-keil/
+build-makefile/
+build-platformio/
+can-debug/
+usb-can-debug/
+debug-gdb-openocd/
+debug-jlink/
+debug-platformio/
+flash-idf/
+flash-jlink/
+flash-keil/
+flash-openocd/
+flash-platformio/
+logic-analyzer/
+memory-analysis/
+modbus-debug/
+rtos-debug/
+serial-monitor/
+serial-shell/
+static-analysis/
+visa-debug/
+workflow/
+
+# orca 系列 → _sources/orca/skills/
+computer-use/
+orca-cli/
+orchestration/
+
 # 内部管理目录
 _sources/
 _tree.md

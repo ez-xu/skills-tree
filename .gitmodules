@@ -10,3 +10,9 @@
 [submodule "_sources/OfficeCLI"]
 	path = _sources/OfficeCLI
 	url = https://github.com/iOfficeAI/OfficeCLI.git
+[submodule "_sources/embed-ai-tool"]
+	path = _sources/embed-ai-tool
+	url = https://github.com/LeoKemp223/embed-ai-tool.git
+[submodule "_sources/orca"]
+	path = _sources/orca
+	url = https://github.com/stablyai/orca.git

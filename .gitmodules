@@ -1,3 +1,6 @@
 [submodule "easyeda-api"]
 	path = easyeda-api
 	url = https://github.com/easyeda/easyeda-api-skill
+[submodule "_sources/easyeda-api-skill"]
+	path = _sources/easyeda-api-skill
+	url = https://github.com/easyeda/easyeda-api-skill

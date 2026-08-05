@@ -2,3 +2,21 @@
 *.em_skill.json
 __pycache__/
 *.pyc
+
+# 外部来源技能 — 由 _sync.sh 创建 symlink，不纳入版本控制
+bom/
+datasheets/
+digikey/
+element14/
+emc/
+jlcpcb/
+kicad/
+lcsc/
+mouser/
+pcbway/
+spice/
+easyeda-api/
+
+# 内部管理目录
+_sources/
+_tree.md

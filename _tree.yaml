@@ -1,0 +1,120 @@
+# Skills Tree 配置文件
+# 定义技能分类树和外部来源映射
+
+version: "1.0"
+
+# ============================================================
+# 外部来源 — 通过 symlink 链接的外部技能仓库
+# ============================================================
+sources:
+  kicad-happy:
+    remote: https://github.com/aklofas/kicad-happy.git
+    local_path: C:/Users/15854/kicad-happy
+    skills_dir: skills
+    skills:
+      - bom
+      - datasheets
+      - digikey
+      - element14
+      - emc
+      - jlcpcb
+      - kicad
+      - lcsc
+      - mouser
+      - pcbway
+      - spice
+
+  easyeda-api:
+    type: submodule
+    remote: https://github.com/easyeda/easyeda-api-skill.git
+    local_dir: _sources/easyeda-api-skill
+    skills:
+      - easyeda-api
+
+# ============================================================
+# 分类树 — 所有技能的分类归属
+# ============================================================
+categories:
+  embedded:
+    label: "🔌 嵌入式"
+    description: "固件构建、烧录、调试、通信监控、静态分析"
+    skills:
+      - build-cmake
+      - build-iar
+      - build-idf
+      - build-keil
+      - build-makefile
+      - build-platformio
+      - flash-idf
+      - flash-jlink
+      - flash-keil
+      - flash-openocd
+      - flash-platformio
+      - debug-gdb-openocd
+      - debug-jlink
+      - debug-platformio
+      - can-debug
+      - modbus-debug
+      - rtos-debug
+      - serial-monitor
+      - serial-shell
+      - logic-analyzer
+      - visa-debug
+      - static-analysis
+      - memory-analysis
+      - workflow
+
+  eda:
+    label: "📐 EDA / PCB"
+    description: "原理图/PCB设计、BOM管理、元器件采购、制造、仿真"
+    external_only: true
+    skills:
+      - kicad
+      - easyeda-api
+      - bom
+      - datasheets
+      - digikey
+      - mouser
+      - element14
+      - lcsc
+      - jlcpcb
+      - pcbway
+      - spice
+      - emc
+
+  office:
+    label: "📋 办公文档"
+    description: "PPT演示、Word文档、Excel表格"
+    skills:
+      - officecli-pptx
+      - officecli-pitch-deck
+      - morph-ppt
+      - morph-ppt-3d
+      - officecli-docx
+      - officecli-word-form
+      - officecli-academic-paper
+      - officecli-xlsx
+      - officecli-financial-model
+      - officecli-data-dashboard
+
+  devops:
+    label: "🔧 研发协作"
+    description: "Git操作、代码审查、UI设计"
+    skills:
+      - git-commit-assistant
+      - gitlab-download
+      - gitlab-upload
+      - project-diff
+      - qt-cpp-review
+      - qt-ui-design
+      - hallmark
+
+  infra:
+    label: "🛠️ 基础设施"
+    description: "技能管理、桌面自动化、多智能体编排"
+    skills:
+      - skill-forge
+      - shared
+      - computer-use
+      - orca-cli
+      - orchestration

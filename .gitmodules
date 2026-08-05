@@ -25,3 +25,6 @@
 [submodule "_sources/skill-forge"]
 	path = _sources/skill-forge
 	url = https://github.com/nekocode/skill-forge.git
+[submodule "_sources/jinghan-xu-skills"]
+	path = _sources/jinghan-xu-skills
+	url = https://github.com/ez-xu/jinghan-xu-skills.git

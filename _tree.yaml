@@ -96,6 +96,16 @@ sources:
     skills:
       - skill-forge
 
+  jinghan-xu-skills:
+    type: submodule
+    remote: https://github.com/ez-xu/jinghan-xu-skills.git
+    local_dir: _sources/jinghan-xu-skills
+    skills_dir: skills
+    skills:
+      - gitlab-download
+      - gitlab-upload
+      - usb-can-debug
+
   OfficeCLI:
     type: submodule
     remote: https://github.com/iOfficeAI/OfficeCLI.git

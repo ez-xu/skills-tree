@@ -36,7 +36,10 @@ build-idf/
 build-keil/
 build-makefile/
 build-platformio/
-# usb-can-debug 为独立技能，纳入版本控制
+# jinghan-xu-skills → _sources/jinghan-xu-skills/skills/
+gitlab-download/
+gitlab-upload/
+usb-can-debug/
 debug-gdb-openocd/
 debug-jlink/
 debug-platformio/

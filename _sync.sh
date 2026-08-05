@@ -60,9 +60,9 @@ create_link() {
 }
 
 # ── 1. 同步 kicad-happy 技能 ──────────────────────────────
-echo -e "${YELLOW}[1/4]${NC} 链接 kicad-happy 技能..."
+echo -e "${YELLOW}[1/5]${NC} 链接 kicad-happy 技能..."
 
-KICAD_HAPPY_BASE="C:/Users/15854/kicad-happy/skills"
+KICAD_HAPPY_BASE="$SKILLS_DIR/_sources/kicad-happy/skills"
 KICAD_SKILLS=(bom datasheets digikey element14 emc jlcpcb kicad lcsc mouser pcbway spice)
 
 for skill in "${KICAD_SKILLS[@]}"; do
@@ -74,9 +74,25 @@ for skill in "${KICAD_SKILLS[@]}"; do
     fi
 done
 
-# ── 2. 同步 easyeda-api submodule ─────────────────────────
+# ── 2. 同步 OfficeCLI 技能 ────────────────────────────────
 echo ""
-echo -e "${YELLOW}[2/4]${NC} 同步 easyeda-api submodule..."
+echo -e "${YELLOW}[2/5]${NC} 链接 OfficeCLI 技能..."
+
+OFFICECLI_BASE="$SKILLS_DIR/_sources/OfficeCLI/skills"
+OFFICECLI_SKILLS=(officecli-pptx officecli-docx officecli-xlsx officecli-pitch-deck officecli-financial-model officecli-data-dashboard officecli-word-form officecli-academic-paper morph-ppt morph-ppt-3d)
+
+for skill in "${OFFICECLI_SKILLS[@]}"; do
+    src="$OFFICECLI_BASE/$skill"
+    if [ -d "$src" ]; then
+        create_link "$skill" "$src" "OfficeCLI/skills/$skill"
+    else
+        echo "  ${RED}✗${NC} $skill: 源路径不存在 $src"
+    fi
+done
+
+# ── 3. 同步 easyeda-api submodule ─────────────────────────
+echo ""
+echo -e "${YELLOW}[3/5]${NC} 同步 easyeda-api submodule..."
 
 EASYEDA_SRC="_sources/easyeda-api-skill"
 if [ -d "$EASYEDA_SRC" ]; then
@@ -88,7 +104,7 @@ fi
 
 # ── 3. 校验所有技能 ──────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[3/4]${NC} 校验技能完整性..."
+echo -e "${YELLOW}[4/5]${NC} 校验技能完整性..."
 
 total=0
 missing=0
@@ -121,7 +137,7 @@ fi
 
 # ── 4. 生成 _tree.md ─────────────────────────────────────
 echo ""
-echo -e "${YELLOW}[4/4]${NC} 生成 _tree.md..."
+echo -e "${YELLOW}[5/5]${NC} 生成 _tree.md..."
 
 cat > _tree.md << 'TREEHEADER'
 # 🌳 Skills Tree

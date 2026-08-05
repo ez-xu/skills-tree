@@ -4,3 +4,9 @@
 [submodule "_sources/easyeda-api-skill"]
 	path = _sources/easyeda-api-skill
 	url = https://github.com/easyeda/easyeda-api-skill
+[submodule "_sources/kicad-happy"]
+	path = _sources/kicad-happy
+	url = https://github.com/aklofas/kicad-happy.git
+[submodule "_sources/OfficeCLI"]
+	path = _sources/OfficeCLI
+	url = https://github.com/iOfficeAI/OfficeCLI.git

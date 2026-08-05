@@ -9,7 +9,8 @@ version: "1.0"
 sources:
   kicad-happy:
     remote: https://github.com/aklofas/kicad-happy.git
-    local_path: C:/Users/15854/kicad-happy
+    type: submodule
+    local_dir: _sources/kicad-happy
     skills_dir: skills
     skills:
       - bom
@@ -30,6 +31,23 @@ sources:
     local_dir: _sources/easyeda-api-skill
     skills:
       - easyeda-api
+
+  OfficeCLI:
+    type: submodule
+    remote: https://github.com/iOfficeAI/OfficeCLI.git
+    local_dir: _sources/OfficeCLI
+    skills_dir: skills
+    skills:
+      - officecli-pptx
+      - officecli-docx
+      - officecli-xlsx
+      - officecli-pitch-deck
+      - officecli-financial-model
+      - officecli-data-dashboard
+      - officecli-word-form
+      - officecli-academic-paper
+      - morph-ppt
+      - morph-ppt-3d
 
 # ============================================================
 # 分类树 — 所有技能的分类归属

@@ -17,6 +17,18 @@ pcbway/
 spice/
 easyeda-api/
 
+# OfficeCLI 系列 → _sources/OfficeCLI/skills/
+officecli-pptx/
+officecli-docx/
+officecli-xlsx/
+officecli-pitch-deck/
+officecli-financial-model/
+officecli-data-dashboard/
+officecli-word-form/
+officecli-academic-paper/
+morph-ppt/
+morph-ppt-3d/
+
 # 内部管理目录
 _sources/
 _tree.md

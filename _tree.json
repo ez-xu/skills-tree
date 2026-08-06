@@ -134,6 +134,14 @@
       "path": "_sources/kinetic-typography-skills",
       "skills_dir": "skills",
       "skills": ["kinetic-typography"]
+    },
+    {
+      "name": "claude-skills",
+      "remote": "https://github.com/LiTianYun/claude-skills.git",
+      "path": "_sources/claude-skills",
+      "skills_dir": ".",
+      "skills": ["git-commit-helper", "project-diff 工程变更比对"],
+      "aliases": {"git-commit-helper": "git-commit-assistant", "project-diff 工程变更比对": "project-diff"}
     }
   ],
   "categories": {

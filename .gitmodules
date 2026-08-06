@@ -52,3 +52,6 @@
 [submodule "_sources/kinetic-typography-skills"]
 	path = _sources/kinetic-typography-skills
 	url = https://github.com/iart-ai/kinetic-typography-skills.git
+[submodule "_sources/claude-skills"]
+	path = _sources/claude-skills
+	url = https://github.com/LiTianYun/claude-skills.git

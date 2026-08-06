@@ -149,6 +149,10 @@ whiteboard-animation/
 wrapped-video/
 kinetic-typography/
 
+# LiTianYun/claude-skills → _sources/claude-skills/
+git-commit-assistant/
+project-diff/
+
 # 内部管理目录
 _sources/
 _tree.md

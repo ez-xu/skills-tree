@@ -37,3 +37,18 @@
 [submodule "_sources/addyosmani-agent-skills"]
 	path = _sources/addyosmani-agent-skills
 	url = https://github.com/addyosmani/agent-skills.git
+[submodule "_sources/tiktok-video-skills"]
+	path = _sources/tiktok-video-skills
+	url = https://github.com/iart-ai/tiktok-video-skills.git
+[submodule "_sources/text-message-video-skills"]
+	path = _sources/text-message-video-skills
+	url = https://github.com/iart-ai/text-message-video-skills.git
+[submodule "_sources/data-animation-skills"]
+	path = _sources/data-animation-skills
+	url = https://github.com/iart-ai/data-animation-skills.git
+[submodule "_sources/explainer-video-skills"]
+	path = _sources/explainer-video-skills
+	url = https://github.com/iart-ai/explainer-video-skills.git
+[submodule "_sources/kinetic-typography-skills"]
+	path = _sources/kinetic-typography-skills
+	url = https://github.com/iart-ai/kinetic-typography-skills.git

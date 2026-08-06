@@ -94,7 +94,7 @@ def main():
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     md = []
-    md.append(f"# 🌳 Skills Tree\n\n> 自动生成于: {now}\n> 仓库: https://github.com/ez-xu/agent-skills\n\n## 📊 概览\n\n| 分类 | 技能数 |\n|------|--------|")
+    md.append(f"# 🌳 技能树\n\n> 自动生成于: {now}\n> 仓库: https://github.com/ez-xu/skills-tree\n\n## 📊 概览\n\n| 分类 | 技能数 |\n|------|--------|")
 
     for cat, info in tree["categories"].items():
         md.append(f"| {info['label']} | {len(info['skills'])} |")
@@ -117,7 +117,7 @@ def main():
         md.append(f"| {src['name']} | [{repo}]({src['remote']}) | {len(src['skills'])} |")
 
     md.append("\n---\n\n## 🚀 快速操作\n\n```bash")
-    md.append("# 新电脑初始化\ngit clone --recurse-submodules https://github.com/ez-xu/agent-skills.git ~/.agents/skills\ncd ~/.agents/skills && bash _sync.sh")
+    md.append("# 新电脑初始化\ngit clone --recurse-submodules https://github.com/ez-xu/skills-tree.git ~/.agents/skills\ncd ~/.agents/skills && bash _sync.sh")
     md.append("\n# 更新所有技能\ngit pull && git submodule update --remote --recursive && bash _sync.sh")
     md.append("```")
 

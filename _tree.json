@@ -6,152 +6,487 @@
       "remote": "https://github.com/aklofas/kicad-happy.git",
       "path": "_sources/kicad-happy",
       "skills_dir": "skills",
-      "skills": ["bom", "datasheets", "digikey", "element14", "emc", "jlcpcb", "kicad", "lcsc", "mouser", "pcbway", "spice"]
+      "skills": [
+        "bom",
+        "datasheets",
+        "digikey",
+        "element14",
+        "emc",
+        "jlcpcb",
+        "kicad",
+        "lcsc",
+        "mouser",
+        "pcbway",
+        "spice"
+      ]
     },
     {
       "name": "embed-ai-tool",
       "remote": "https://github.com/LeoKemp223/embed-ai-tool.git",
       "path": "_sources/embed-ai-tool",
       "skills_dir": "skills",
-      "skills": ["build-cmake", "build-iar", "build-idf", "build-keil", "build-makefile", "build-platformio", "debug-gdb-openocd", "debug-jlink", "debug-platformio", "flash-idf", "flash-jlink", "flash-keil", "flash-openocd", "flash-platformio", "logic-analyzer", "memory-analysis", "modbus-debug", "rtos-debug", "serial-monitor", "serial-shell", "static-analysis", "visa-debug", "workflow"],
-      "aliases": {"can-debug": "usb-can-debug"}
+      "skills": [
+        "build-cmake",
+        "build-iar",
+        "build-idf",
+        "build-keil",
+        "build-makefile",
+        "build-platformio",
+        "debug-gdb-openocd",
+        "debug-jlink",
+        "debug-platformio",
+        "flash-idf",
+        "flash-jlink",
+        "flash-keil",
+        "flash-openocd",
+        "flash-platformio",
+        "logic-analyzer",
+        "memory-analysis",
+        "modbus-debug",
+        "rtos-debug",
+        "serial-monitor",
+        "serial-shell",
+        "static-analysis",
+        "visa-debug",
+        "workflow"
+      ],
+      "aliases": {
+        "can-debug": "usb-can-debug"
+      }
     },
     {
       "name": "qt-agent-skills",
       "remote": "https://github.com/TheQtCompanyRnD/agent-skills.git",
       "path": "_sources/qt-agent-skills",
       "skills_dir": "skills",
-      "skills": ["qt-cpp-review", "qt-ui-design"]
+      "skills": [
+        "qt-cpp-review",
+        "qt-ui-design"
+      ]
     },
     {
       "name": "orca",
       "remote": "https://github.com/stablyai/orca.git",
       "path": "_sources/orca",
       "skills_dir": "skills",
-      "skills": ["computer-use", "orca-cli", "orchestration"]
+      "skills": [
+        "computer-use",
+        "orca-cli",
+        "orchestration"
+      ]
     },
     {
       "name": "OfficeCLI",
       "remote": "https://github.com/iOfficeAI/OfficeCLI.git",
       "path": "_sources/OfficeCLI",
       "skills_dir": "skills",
-      "skills": ["officecli-pptx", "officecli-docx", "officecli-xlsx", "officecli-pitch-deck", "officecli-financial-model", "officecli-data-dashboard", "officecli-word-form", "officecli-academic-paper", "morph-ppt", "morph-ppt-3d"]
+      "skills": [
+        "officecli-pptx",
+        "officecli-docx",
+        "officecli-xlsx",
+        "officecli-pitch-deck",
+        "officecli-financial-model",
+        "officecli-data-dashboard",
+        "officecli-word-form",
+        "officecli-academic-paper",
+        "morph-ppt",
+        "morph-ppt-3d"
+      ]
     },
     {
       "name": "hallmark",
       "remote": "https://github.com/nutlope/hallmark.git",
       "path": "_sources/hallmark",
       "skills_dir": "skills/hallmark",
-      "skills": ["hallmark"]
+      "skills": [
+        "hallmark"
+      ]
     },
     {
       "name": "easyeda-api",
       "remote": "https://github.com/easyeda/easyeda-api-skill.git",
       "path": "_sources/easyeda-api-skill",
       "skills_dir": ".",
-      "skills": ["easyeda-api"]
+      "skills": [
+        "easyeda-api"
+      ]
     },
     {
       "name": "skill-forge",
       "remote": "https://github.com/nekocode/skill-forge.git",
       "path": "_sources/skill-forge",
       "skills_dir": "skills/skill-forge",
-      "skills": ["skill-forge"]
+      "skills": [
+        "skill-forge"
+      ]
     },
     {
       "name": "jinghan-xu-skills",
       "remote": "https://github.com/ez-xu/jinghan-xu-skills.git",
       "path": "_sources/jinghan-xu-skills",
       "skills_dir": "skills",
-      "skills": ["gitlab-download", "gitlab-upload", "usb-can-debug"]
+      "skills": [
+        "gitlab-download",
+        "gitlab-upload",
+        "usb-can-debug"
+      ]
     },
     {
       "name": "agent-skill-creator",
       "remote": "https://github.com/FrancyJGLisboa/agent-skill-creator.git",
       "path": "_sources/agent-skill-creator",
       "skills_dir": ".",
-      "skills": ["agent-skill-creator"]
+      "skills": [
+        "agent-skill-creator"
+      ]
     },
     {
       "name": "mattpocock-engineering",
       "remote": "https://github.com/mattpocock/skills.git",
       "path": "_sources/mattpocock-skills",
       "skills_dir": "skills/engineering",
-      "skills": ["ask-matt", "code-review", "codebase-design", "diagnosing-bugs", "domain-modeling", "grill-with-docs", "implement", "improve-codebase-architecture", "prototype", "research", "resolving-merge-conflicts", "setup-matt-pocock-skills", "tdd", "to-spec", "to-tickets", "triage", "wayfinder", "wizard"]
+      "skills": [
+        "ask-matt",
+        "codebase-design",
+        "domain-modeling",
+        "grill-with-docs",
+        "implement",
+        "improve-codebase-architecture",
+        "prototype",
+        "research",
+        "resolving-merge-conflicts",
+        "setup-matt-pocock-skills",
+        "to-spec",
+        "to-tickets",
+        "triage",
+        "wayfinder",
+        "wizard"
+      ]
     },
     {
       "name": "mattpocock-productivity",
       "remote": "https://github.com/mattpocock/skills.git",
       "path": "_sources/mattpocock-skills",
       "skills_dir": "skills/productivity",
-      "skills": ["grill-me", "grilling", "handoff", "teach", "to-questionnaire", "wait-what", "writing-for-agents"]
+      "skills": [
+        "grill-me",
+        "grilling",
+        "handoff",
+        "teach",
+        "to-questionnaire",
+        "wait-what",
+        "writing-for-agents"
+      ]
     },
     {
       "name": "mattpocock-misc",
       "remote": "https://github.com/mattpocock/skills.git",
       "path": "_sources/mattpocock-skills",
       "skills_dir": "skills/misc",
-      "skills": ["git-guardrails-claude-code", "migrate-to-shoehorn", "scaffold-exercises", "setup-pre-commit"]
+      "skills": [
+        "git-guardrails-claude-code",
+        "migrate-to-shoehorn",
+        "scaffold-exercises",
+        "setup-pre-commit"
+      ]
     },
     {
       "name": "addyosmani-agent-skills",
       "remote": "https://github.com/addyosmani/agent-skills.git",
       "path": "_sources/addyosmani-agent-skills",
       "skills_dir": "skills",
-      "skills": ["api-and-interface-design", "browser-testing-with-devtools", "ci-cd-and-automation", "code-review-and-quality", "code-simplification", "context-engineering", "debugging-and-error-recovery", "deprecation-and-migration", "documentation-and-adrs", "doubt-driven-development", "frontend-ui-engineering", "git-workflow-and-versioning", "idea-refine", "incremental-implementation", "interview-me", "observability-and-instrumentation", "performance-optimization", "planning-and-task-breakdown", "security-and-hardening", "shipping-and-launch", "source-driven-development", "spec-driven-development", "test-driven-development", "using-agent-skills"]
+      "skills": [
+        "api-and-interface-design",
+        "browser-testing-with-devtools",
+        "ci-cd-and-automation",
+        "code-simplification",
+        "context-engineering",
+        "deprecation-and-migration",
+        "documentation-and-adrs",
+        "doubt-driven-development",
+        "frontend-ui-engineering",
+        "git-workflow-and-versioning",
+        "idea-refine",
+        "incremental-implementation",
+        "interview-me",
+        "observability-and-instrumentation",
+        "performance-optimization",
+        "security-and-hardening",
+        "shipping-and-launch",
+        "source-driven-development",
+        "spec-driven-development",
+        "using-agent-skills"
+      ]
     },
     {
       "name": "tiktok-video-skills",
       "remote": "https://github.com/iart-ai/tiktok-video-skills.git",
       "path": "_sources/tiktok-video-skills",
       "skills_dir": "skills",
-      "skills": ["caption-animation", "countdown-video", "lower-thirds", "short-form-video"]
+      "skills": [
+        "caption-animation",
+        "countdown-video",
+        "lower-thirds",
+        "short-form-video"
+      ]
     },
     {
       "name": "text-message-video-skills",
       "remote": "https://github.com/iart-ai/text-message-video-skills.git",
       "path": "_sources/text-message-video-skills",
       "skills_dir": "skills",
-      "skills": ["text-message-animation"]
+      "skills": [
+        "text-message-animation"
+      ]
     },
     {
       "name": "data-animation-skills",
       "remote": "https://github.com/iart-ai/data-animation-skills.git",
       "path": "_sources/data-animation-skills",
       "skills_dir": "skills",
-      "skills": ["animated-infographic", "chart-animation", "presentation-video"]
+      "skills": [
+        "animated-infographic",
+        "chart-animation",
+        "presentation-video"
+      ]
     },
     {
       "name": "explainer-video-skills",
       "remote": "https://github.com/iart-ai/explainer-video-skills.git",
       "path": "_sources/explainer-video-skills",
       "skills_dir": "skills",
-      "skills": ["diagram-animation", "explainer-video", "isometric-animation", "whiteboard-animation", "wrapped-video"]
+      "skills": [
+        "diagram-animation",
+        "explainer-video",
+        "isometric-animation",
+        "whiteboard-animation",
+        "wrapped-video"
+      ]
     },
     {
       "name": "kinetic-typography-skills",
       "remote": "https://github.com/iart-ai/kinetic-typography-skills.git",
       "path": "_sources/kinetic-typography-skills",
       "skills_dir": "skills",
-      "skills": ["kinetic-typography"]
+      "skills": [
+        "kinetic-typography"
+      ]
     },
     {
       "name": "claude-skills",
       "remote": "https://github.com/LiTianYun/claude-skills.git",
       "path": "_sources/claude-skills",
       "skills_dir": ".",
-      "skills": ["git-commit-helper", "project-diff 工程变更比对"],
-      "aliases": {"git-commit-helper": "git-commit-assistant", "project-diff 工程变更比对": "project-diff"}
+      "skills": [
+        "git-commit-helper",
+        "project-diff 工程变更比对"
+      ],
+      "aliases": {
+        "git-commit-helper": "git-commit-assistant",
+        "project-diff 工程变更比对": "project-diff"
+      }
+    },
+    {
+      "name": "superpowers",
+      "remote": "https://github.com/obra/superpowers.git",
+      "path": "_sources/superpowers",
+      "skills_dir": "skills",
+      "skills": [
+        "brainstorming",
+        "dispatching-parallel-agents",
+        "executing-plans",
+        "finishing-a-development-branch",
+        "receiving-code-review",
+        "requesting-code-review",
+        "subagent-driven-development",
+        "systematic-debugging",
+        "test-driven-development",
+        "using-git-worktrees",
+        "using-superpowers",
+        "verification-before-completion",
+        "writing-plans",
+        "writing-skills"
+      ]
     }
   ],
   "categories": {
-    "embedded": {"label": "🔌 嵌入式", "skills": ["build-cmake", "build-iar", "build-idf", "build-keil", "build-makefile", "build-platformio", "flash-idf", "flash-jlink", "flash-keil", "flash-openocd", "flash-platformio", "debug-gdb-openocd", "debug-jlink", "debug-platformio", "modbus-debug", "rtos-debug", "serial-monitor", "serial-shell", "usb-can-debug", "logic-analyzer", "visa-debug", "static-analysis", "memory-analysis", "workflow"]},
-    "eda": {"label": "📐 EDA / PCB", "skills": ["kicad", "easyeda-api", "bom", "datasheets", "digikey", "mouser", "element14", "lcsc", "jlcpcb", "pcbway", "spice", "emc"]},
-    "office": {"label": "📋 办公文档", "skills": ["officecli-pptx", "officecli-pitch-deck", "morph-ppt", "morph-ppt-3d", "officecli-docx", "officecli-word-form", "officecli-academic-paper", "officecli-xlsx", "officecli-financial-model", "officecli-data-dashboard"]},
-    "devops": {"label": "🔧 研发协作", "skills": ["git-commit-assistant", "gitlab-download", "gitlab-upload", "project-diff", "qt-cpp-review", "qt-ui-design", "hallmark"]},
-    "infra": {"label": "🛠️ 基础设施", "skills": ["skill-forge", "agent-skill-creator", "shared", "computer-use", "orca-cli", "orchestration"]},
-    "addyosmani": {"label": "🏗️ Addy Osmani 工程方法", "skills": ["api-and-interface-design", "browser-testing-with-devtools", "ci-cd-and-automation", "code-review-and-quality", "code-simplification", "context-engineering", "debugging-and-error-recovery", "deprecation-and-migration", "documentation-and-adrs", "doubt-driven-development", "frontend-ui-engineering", "git-workflow-and-versioning", "idea-refine", "incremental-implementation", "interview-me", "observability-and-instrumentation", "performance-optimization", "planning-and-task-breakdown", "security-and-hardening", "shipping-and-launch", "source-driven-development", "spec-driven-development", "test-driven-development", "using-agent-skills"]},
-    "mattpocock": {"label": "🧑‍💻 Matt Pocock 技能", "skills": ["ask-matt", "code-review", "codebase-design", "diagnosing-bugs", "domain-modeling", "grill-with-docs", "implement", "improve-codebase-architecture", "prototype", "research", "resolving-merge-conflicts", "setup-matt-pocock-skills", "tdd", "to-spec", "to-tickets", "triage", "wayfinder", "wizard", "grill-me", "grilling", "handoff", "teach", "to-questionnaire", "wait-what", "writing-for-agents", "git-guardrails-claude-code", "migrate-to-shoehorn", "scaffold-exercises", "setup-pre-commit"]},
-    "video": {"label": "🎬 视频 / 动画", "skills": ["caption-animation", "countdown-video", "lower-thirds", "short-form-video", "text-message-animation", "animated-infographic", "chart-animation", "presentation-video", "diagram-animation", "explainer-video", "isometric-animation", "whiteboard-animation", "wrapped-video", "kinetic-typography"]}
+    "embedded": {
+      "label": "🔌 嵌入式",
+      "skills": [
+        "build-cmake",
+        "build-iar",
+        "build-idf",
+        "build-keil",
+        "build-makefile",
+        "build-platformio",
+        "flash-idf",
+        "flash-jlink",
+        "flash-keil",
+        "flash-openocd",
+        "flash-platformio",
+        "debug-gdb-openocd",
+        "debug-jlink",
+        "debug-platformio",
+        "modbus-debug",
+        "rtos-debug",
+        "serial-monitor",
+        "serial-shell",
+        "usb-can-debug",
+        "logic-analyzer",
+        "visa-debug",
+        "static-analysis",
+        "memory-analysis",
+        "workflow"
+      ]
+    },
+    "eda": {
+      "label": "📐 EDA / PCB",
+      "skills": [
+        "kicad",
+        "easyeda-api",
+        "bom",
+        "datasheets",
+        "digikey",
+        "mouser",
+        "element14",
+        "lcsc",
+        "jlcpcb",
+        "pcbway",
+        "spice",
+        "emc"
+      ]
+    },
+    "office": {
+      "label": "📋 办公文档",
+      "skills": [
+        "officecli-pptx",
+        "officecli-pitch-deck",
+        "morph-ppt",
+        "morph-ppt-3d",
+        "officecli-docx",
+        "officecli-word-form",
+        "officecli-academic-paper",
+        "officecli-xlsx",
+        "officecli-financial-model",
+        "officecli-data-dashboard"
+      ]
+    },
+    "devops": {
+      "label": "🔧 研发协作",
+      "skills": [
+        "git-commit-assistant",
+        "gitlab-download",
+        "gitlab-upload",
+        "project-diff",
+        "qt-cpp-review",
+        "qt-ui-design",
+        "hallmark"
+      ]
+    },
+    "infra": {
+      "label": "🛠️ 基础设施",
+      "skills": [
+        "skill-forge",
+        "agent-skill-creator",
+        "shared",
+        "computer-use",
+        "orca-cli",
+        "orchestration"
+      ]
+    },
+    "addyosmani": {
+      "label": "🏗️ Addy Osmani 工程方法",
+      "skills": [
+        "api-and-interface-design",
+        "browser-testing-with-devtools",
+        "ci-cd-and-automation",
+        "code-simplification",
+        "context-engineering",
+        "deprecation-and-migration",
+        "documentation-and-adrs",
+        "doubt-driven-development",
+        "frontend-ui-engineering",
+        "git-workflow-and-versioning",
+        "idea-refine",
+        "incremental-implementation",
+        "interview-me",
+        "observability-and-instrumentation",
+        "performance-optimization",
+        "security-and-hardening",
+        "shipping-and-launch",
+        "source-driven-development",
+        "spec-driven-development",
+        "using-agent-skills"
+      ]
+    },
+    "mattpocock": {
+      "label": "🧑‍💻 Matt Pocock 技能",
+      "skills": [
+        "ask-matt",
+        "codebase-design",
+        "domain-modeling",
+        "grill-with-docs",
+        "implement",
+        "improve-codebase-architecture",
+        "prototype",
+        "research",
+        "resolving-merge-conflicts",
+        "setup-matt-pocock-skills",
+        "to-spec",
+        "to-tickets",
+        "triage",
+        "wayfinder",
+        "wizard",
+        "grill-me",
+        "grilling",
+        "handoff",
+        "teach",
+        "to-questionnaire",
+        "wait-what",
+        "writing-for-agents",
+        "git-guardrails-claude-code",
+        "migrate-to-shoehorn",
+        "scaffold-exercises",
+        "setup-pre-commit"
+      ]
+    },
+    "video": {
+      "label": "🎬 视频 / 动画",
+      "skills": [
+        "caption-animation",
+        "countdown-video",
+        "lower-thirds",
+        "short-form-video",
+        "text-message-animation",
+        "animated-infographic",
+        "chart-animation",
+        "presentation-video",
+        "diagram-animation",
+        "explainer-video",
+        "isometric-animation",
+        "whiteboard-animation",
+        "wrapped-video",
+        "kinetic-typography"
+      ]
+    },
+    "superpowers": {
+      "label": "🤖 全自动工程流程",
+      "skills": [
+        "brainstorming",
+        "dispatching-parallel-agents",
+        "executing-plans",
+        "finishing-a-development-branch",
+        "receiving-code-review",
+        "requesting-code-review",
+        "subagent-driven-development",
+        "systematic-debugging",
+        "test-driven-development",
+        "using-git-worktrees",
+        "using-superpowers",
+        "verification-before-completion",
+        "writing-plans",
+        "writing-skills"
+      ]
+    }
   }
 }

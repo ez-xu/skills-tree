@@ -1,4 +1,4 @@
-# 🌳 Skills Tree
+# 🌳 技能树
 
 > 统一管理 57 个 Claude Code 技能的 Git 子模块树。
 
@@ -6,7 +6,7 @@
 
 ```bash
 # 1. 克隆根仓库（含所有子模块）
-git clone --recurse-submodules https://github.com/ez-xu/agent-skills.git ~/.agents/skills
+git clone --recurse-submodules https://github.com/ez-xu/skills-tree.git ~/.agents/skills
 
 # 2. 创建技能链接（Windows 用 PowerShell Junction）
 cd ~/.agents/skills

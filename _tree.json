@@ -229,6 +229,15 @@
         "writing-plans",
         "writing-skills"
       ]
+    },
+    {
+      "name": "baidupan",
+      "remote": "https://github.com/ez-xu/baidupan.git",
+      "path": "_sources/baidupan",
+      "skills_dir": ".",
+      "skills": [
+        "baidupan"
+      ]
     }
   ],
   "categories": {
@@ -352,6 +361,12 @@
         "verification-before-completion",
         "writing-plans",
         "writing-skills"
+      ]
+    },
+    "netdisk": {
+      "label": "☁️ 网盘工具",
+      "skills": [
+        "baidupan"
       ]
     }
   }

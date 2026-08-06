@@ -153,6 +153,21 @@ kinetic-typography/
 git-commit-assistant/
 project-diff/
 
+# obra/superpowers → _sources/superpowers/skills/
+brainstorming/
+dispatching-parallel-agents/
+executing-plans/
+finishing-a-development-branch/
+receiving-code-review/
+requesting-code-review/
+subagent-driven-development/
+systematic-debugging/
+using-git-worktrees/
+using-superpowers/
+verification-before-completion/
+writing-plans/
+writing-skills/
+
 # 内部管理目录
 _sources/
 _tree.md

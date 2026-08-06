@@ -191,34 +191,6 @@
       ]
     },
     {
-      "name": "addyosmani-agent-skills",
-      "remote": "https://github.com/addyosmani/agent-skills.git",
-      "path": "_sources/addyosmani-agent-skills",
-      "skills_dir": "skills",
-      "skills": [
-        "api-and-interface-design",
-        "browser-testing-with-devtools",
-        "ci-cd-and-automation",
-        "code-simplification",
-        "context-engineering",
-        "deprecation-and-migration",
-        "documentation-and-adrs",
-        "doubt-driven-development",
-        "frontend-ui-engineering",
-        "git-workflow-and-versioning",
-        "idea-refine",
-        "incremental-implementation",
-        "interview-me",
-        "observability-and-instrumentation",
-        "performance-optimization",
-        "security-and-hardening",
-        "shipping-and-launch",
-        "source-driven-development",
-        "spec-driven-development",
-        "using-agent-skills"
-      ]
-    },
-    {
       "name": "tiktok-video-skills",
       "remote": "https://github.com/iart-ai/tiktok-video-skills.git",
       "path": "_sources/tiktok-video-skills",
@@ -392,31 +364,6 @@
         "computer-use",
         "orca-cli",
         "orchestration"
-      ]
-    },
-    "addyosmani": {
-      "label": "🏗️ Addy Osmani 工程方法",
-      "skills": [
-        "api-and-interface-design",
-        "browser-testing-with-devtools",
-        "ci-cd-and-automation",
-        "code-simplification",
-        "context-engineering",
-        "deprecation-and-migration",
-        "documentation-and-adrs",
-        "doubt-driven-development",
-        "frontend-ui-engineering",
-        "git-workflow-and-versioning",
-        "idea-refine",
-        "incremental-implementation",
-        "interview-me",
-        "observability-and-instrumentation",
-        "performance-optimization",
-        "security-and-hardening",
-        "shipping-and-launch",
-        "source-driven-development",
-        "spec-driven-development",
-        "using-agent-skills"
       ]
     },
     "mattpocock": {

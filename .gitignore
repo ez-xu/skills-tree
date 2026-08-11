@@ -117,6 +117,12 @@ baidupan/
 drama-forge/
 minimax-video-pipeline-skill/
 
+# adversaria → _sources/adversaria/skills/
+crucible/
+devils-advocate/
+steelman/
+verdict/
+
 # 内部管理目录
 _sources/
 _tree.md

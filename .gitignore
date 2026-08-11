@@ -112,6 +112,20 @@ verification-before-completion/
 writing-plans/
 writing-skills/
 
+# ez-xu 自有技能 → _sources/baidupan, _sources/minimax-video-pipeline-skill
+baidupan/
+drama-forge/
+minimax-video-pipeline-skill/
+
+# adversaria → _sources/adversaria/skills/
+crucible/
+devils-advocate/
+steelman/
+verdict/
+
+# embed-ai-tool 共享脚本 → _sources/embed-ai-tool/shared
+shared/
+
 # 内部管理目录
 _sources/
 _tree.md

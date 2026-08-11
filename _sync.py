@@ -70,19 +70,23 @@ def main():
         log("")
 
     # ── 校验 ────────────────────────────────────────
+    # 基于 _tree.json 注册清单校验（而非遍历文件系统），
+    # 避免把 shared 等共享资源目录误判为技能。
     log(f"{YELLOW}[{n+1}/{n+2}]{NC} 校验技能完整性...")
     total = 0
     missed = 0
 
-    for d in sorted(SKILLS_DIR.iterdir()):
-        if not d.is_dir() or d.name.startswith("_") or d.name.startswith("."):
-            continue
-        total += 1
-        if (d / "SKILL.md").exists():
-            log(f"  {GREEN}[OK]{NC} {d.name}")
-        else:
-            log(f"  {RED}[X]{NC} {d.name} (缺少 SKILL.md)")
-            missed += 1
+    for src in tree["sources"]:
+        aliases = src.get("aliases", {})
+        for skill in src["skills"]:
+            link_name = aliases.get(skill, skill)
+            link_dir = SKILLS_DIR / link_name
+            total += 1
+            if link_dir.is_dir() and (link_dir / "SKILL.md").exists():
+                log(f"  {GREEN}[OK]{NC} {link_name}")
+            else:
+                log(f"  {RED}[X]{NC} {link_name} (链接或 SKILL.md 缺失)")
+                missed += 1
 
     if missed == 0:
         log(f"\n  {GREEN}全部 {total} 个技能校验通过{NC}")

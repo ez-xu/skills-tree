@@ -229,6 +229,36 @@
         "writing-plans",
         "writing-skills"
       ]
+    },
+    {
+      "name": "baidupan",
+      "remote": "https://github.com/ez-xu/baidupan.git",
+      "path": "_sources/baidupan",
+      "skills_dir": ".",
+      "skills": [
+        "baidupan"
+      ]
+    },
+    {
+      "name": "drama-forge",
+      "remote": "https://github.com/ez-xu/drama-forge.git",
+      "path": "_sources/minimax-video-pipeline-skill",
+      "skills_dir": ".",
+      "skills": [
+        "drama-forge"
+      ]
+    },
+    {
+      "name": "adversaria",
+      "remote": "https://github.com/damionrashford/Adversaria.git",
+      "path": "_sources/adversaria",
+      "skills_dir": "skills",
+      "skills": [
+        "crucible",
+        "devils-advocate",
+        "steelman",
+        "verdict"
+      ]
     }
   ],
   "categories": {
@@ -310,7 +340,6 @@
       "skills": [
         "skill-forge",
         "agent-skill-creator",
-        "shared",
         "computer-use",
         "orca-cli",
         "orchestration"
@@ -352,6 +381,12 @@
         "verification-before-completion",
         "writing-plans",
         "writing-skills"
+      ]
+    },
+    "netdisk": {
+      "label": "☁️ 网盘工具",
+      "skills": [
+        "baidupan"
       ]
     }
   }

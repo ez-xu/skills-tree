@@ -1,60 +1,92 @@
 [submodule "easyeda-api"]
 	path = easyeda-api
 	url = https://github.com/easyeda/easyeda-api-skill
+	branch = main
 [submodule "_sources/easyeda-api-skill"]
 	path = _sources/easyeda-api-skill
 	url = https://github.com/easyeda/easyeda-api-skill
+	branch = main
 [submodule "_sources/kicad-happy"]
 	path = _sources/kicad-happy
 	url = https://github.com/aklofas/kicad-happy.git
+	branch = main
 [submodule "_sources/OfficeCLI"]
 	path = _sources/OfficeCLI
 	url = https://github.com/iOfficeAI/OfficeCLI.git
+	branch = main
 [submodule "_sources/embed-ai-tool"]
 	path = _sources/embed-ai-tool
 	url = https://github.com/LeoKemp223/embed-ai-tool.git
+	branch = master
 [submodule "_sources/orca"]
 	path = _sources/orca
 	url = https://github.com/stablyai/orca.git
+	branch = main
 [submodule "_sources/qt-agent-skills"]
 	path = _sources/qt-agent-skills
 	url = https://github.com/TheQtCompanyRnD/agent-skills.git
+	branch = main
 [submodule "_sources/hallmark"]
 	path = _sources/hallmark
 	url = https://github.com/nutlope/hallmark.git
+	branch = main
 [submodule "_sources/skill-forge"]
 	path = _sources/skill-forge
 	url = https://github.com/nekocode/skill-forge.git
+	branch = main
 [submodule "_sources/jinghan-xu-skills"]
 	path = _sources/jinghan-xu-skills
 	url = https://github.com/ez-xu/jinghan-xu-skills.git
+	branch = main
 [submodule "_sources/agent-skill-creator"]
 	path = _sources/agent-skill-creator
 	url = https://github.com/FrancyJGLisboa/agent-skill-creator.git
+	branch = main
 [submodule "_sources/mattpocock-skills"]
 	path = _sources/mattpocock-skills
 	url = https://github.com/mattpocock/skills.git
+	branch = main
 [submodule "_sources/addyosmani-agent-skills"]
 	path = _sources/addyosmani-agent-skills
 	url = https://github.com/addyosmani/agent-skills.git
+	branch = main
 [submodule "_sources/tiktok-video-skills"]
 	path = _sources/tiktok-video-skills
 	url = https://github.com/iart-ai/tiktok-video-skills.git
+	branch = main
 [submodule "_sources/text-message-video-skills"]
 	path = _sources/text-message-video-skills
 	url = https://github.com/iart-ai/text-message-video-skills.git
+	branch = main
 [submodule "_sources/data-animation-skills"]
 	path = _sources/data-animation-skills
 	url = https://github.com/iart-ai/data-animation-skills.git
+	branch = main
 [submodule "_sources/explainer-video-skills"]
 	path = _sources/explainer-video-skills
 	url = https://github.com/iart-ai/explainer-video-skills.git
+	branch = main
 [submodule "_sources/kinetic-typography-skills"]
 	path = _sources/kinetic-typography-skills
 	url = https://github.com/iart-ai/kinetic-typography-skills.git
+	branch = main
 [submodule "_sources/superpowers"]
 	path = _sources/superpowers
 	url = https://github.com/obra/superpowers.git
+	branch = main
 [submodule "_sources/claude-skills"]
 	path = _sources/claude-skills
 	url = https://github.com/LiTianYun/claude-skills.git
+	branch = master
+[submodule "_sources/adversaria"]
+	path = _sources/adversaria
+	url = https://github.com/damionrashford/Adversaria.git
+	branch = main
+[submodule "_sources/baidupan"]
+	path = _sources/baidupan
+	url = https://github.com/ez-xu/baidupan.git
+	branch = main
+[submodule "_sources/minimax-video-pipeline-skill"]
+	path = _sources/minimax-video-pipeline-skill
+	url = https://github.com/ez-xu/drama-forge.git
+	branch = master

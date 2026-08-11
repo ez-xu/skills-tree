@@ -112,6 +112,11 @@ verification-before-completion/
 writing-plans/
 writing-skills/
 
+# ez-xu 自有技能 → _sources/baidupan, _sources/minimax-video-pipeline-skill
+baidupan/
+drama-forge/
+minimax-video-pipeline-skill/
+
 # 内部管理目录
 _sources/
 _tree.md

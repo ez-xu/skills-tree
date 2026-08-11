@@ -340,7 +340,6 @@
       "skills": [
         "skill-forge",
         "agent-skill-creator",
-        "shared",
         "computer-use",
         "orca-cli",
         "orchestration"

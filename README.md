@@ -76,3 +76,4 @@ bash _sync.sh
 - **feat**: 注册 drama-forge 视频生成技能（`tree`）
 - **chore**: 忽略 baidupan/drama-forge 链接目录（`gitignore`）
 - **chore**: 子模块声明 branch 并更新至远端最新（`gitmodules`）
+- **feat**: 注册 adversaria/baidupan/drama-forge 子模块（`gitmodules`）

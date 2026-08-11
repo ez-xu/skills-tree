@@ -57,3 +57,14 @@ bash _sync.sh
 | 更新单个子模块 | `cd _sources/<name> && git pull` |
 | 重建所有链接 | `bash _sync.sh` |
 | 查看完整树 | `cat _tree.md` |
+
+---
+
+## 变更日志
+
+<!-- 新条目添加在最上方 -->
+
+### 2026-08-11
+
+- **feat**: 注册 drama-forge 视频生成技能（`tree`）
+- **chore**: 忽略 baidupan/drama-forge 链接目录（`gitignore`）

@@ -4,124 +4,124 @@ __pycache__/
 *.pyc
 
 # 外部来源技能 — 由 _sync.sh 创建 symlink，不纳入版本控制
-bom/
-datasheets/
-digikey/
-element14/
-emc/
-jlcpcb/
-kicad/
-lcsc/
-mouser/
-pcbway/
-spice/
-easyeda-api/
+bom
+datasheets
+digikey
+element14
+emc
+jlcpcb
+kicad
+lcsc
+mouser
+pcbway
+spice
+easyeda-api
 
-# OfficeCLI 系列 → _sources/OfficeCLI/skills/
-officecli-pptx/
-officecli-docx/
-officecli-xlsx/
-officecli-pitch-deck/
-officecli-financial-model/
-officecli-data-dashboard/
-officecli-word-form/
-officecli-academic-paper/
-morph-ppt/
-morph-ppt-3d/
+# OfficeCLI 系列 → _sources/OfficeCLI/skills
+officecli-pptx
+officecli-docx
+officecli-xlsx
+officecli-pitch-deck
+officecli-financial-model
+officecli-data-dashboard
+officecli-word-form
+officecli-academic-paper
+morph-ppt
+morph-ppt-3d
 
-# embed-ai-tool 系列 → _sources/embed-ai-tool/skills/
-build-cmake/
-build-iar/
-build-idf/
-build-keil/
-build-makefile/
-build-platformio/
-# jinghan-xu-skills → _sources/jinghan-xu-skills/skills/
-gitlab-download/
-gitlab-upload/
-usb-can-debug/
-debug-gdb-openocd/
-debug-jlink/
-debug-platformio/
-flash-idf/
-flash-jlink/
-flash-keil/
-flash-openocd/
-flash-platformio/
-logic-analyzer/
-memory-analysis/
-modbus-debug/
-rtos-debug/
-serial-monitor/
-serial-shell/
-static-analysis/
-visa-debug/
-workflow/
+# embed-ai-tool 系列 → _sources/embed-ai-tool/skills
+build-cmake
+build-iar
+build-idf
+build-keil
+build-makefile
+build-platformio
+# jinghan-xu-skills → _sources/jinghan-xu-skills/skills
+gitlab-download
+gitlab-upload
+usb-can-debug
+debug-gdb-openocd
+debug-jlink
+debug-platformio
+flash-idf
+flash-jlink
+flash-keil
+flash-openocd
+flash-platformio
+logic-analyzer
+memory-analysis
+modbus-debug
+rtos-debug
+serial-monitor
+serial-shell
+static-analysis
+visa-debug
+workflow
 
-# orca 系列 → _sources/orca/skills/
-computer-use/
-orca-cli/
-orchestration/
+# orca 系列 → _sources/orca/skills
+computer-use
+orca-cli
+orchestration
 
-# Qt 系列 → _sources/qt-agent-skills/skills/
-qt-cpp-review/
-qt-ui-design/
+# Qt 系列 → _sources/qt-agent-skills/skills
+qt-cpp-review
+qt-ui-design
 
-# hallmark → _sources/hallmark/skills/hallmark/
-hallmark/
+# hallmark → _sources/hallmark/skills/hallmark
+hallmark
 
-# skill-forge → _sources/skill-forge/skills/skill-forge/
-skill-forge/
+# skill-forge → _sources/skill-forge/skills/skill-forge
+skill-forge
 
-# agent-skill-creator → _sources/agent-skill-creator/
-agent-skill-creator/
+# agent-skill-creator → _sources/agent-skill-creator
+agent-skill-creator
 
-# iart-ai 视频/动画系列 → _sources/*-video-skills/skills/
-caption-animation/
-countdown-video/
-lower-thirds/
-short-form-video/
-text-message-animation/
-animated-infographic/
-chart-animation/
-presentation-video/
-diagram-animation/
-explainer-video/
-isometric-animation/
-whiteboard-animation/
-wrapped-video/
-kinetic-typography/
+# iart-ai 视频/动画系列 → _sources/*-video-skills/skills
+caption-animation
+countdown-video
+lower-thirds
+short-form-video
+text-message-animation
+animated-infographic
+chart-animation
+presentation-video
+diagram-animation
+explainer-video
+isometric-animation
+whiteboard-animation
+wrapped-video
+kinetic-typography
 
-# LiTianYun/claude-skills → _sources/claude-skills/
-git-commit-assistant/
-project-diff/
+# LiTianYun/claude-skills → _sources/claude-skills
+git-commit-assistant
+project-diff
 
-# obra/superpowers → _sources/superpowers/skills/
-brainstorming/
-dispatching-parallel-agents/
-executing-plans/
-finishing-a-development-branch/
-receiving-code-review/
-requesting-code-review/
-subagent-driven-development/
-systematic-debugging/
-test-driven-development/
-using-git-worktrees/
-using-superpowers/
-verification-before-completion/
-writing-plans/
-writing-skills/
+# obra/superpowers → _sources/superpowers/skills
+brainstorming
+dispatching-parallel-agents
+executing-plans
+finishing-a-development-branch
+receiving-code-review
+requesting-code-review
+subagent-driven-development
+systematic-debugging
+test-driven-development
+using-git-worktrees
+using-superpowers
+verification-before-completion
+writing-plans
+writing-skills
 
 # ez-xu 自有技能 → _sources/baidupan, _sources/minimax-video-pipeline-skill
-baidupan/
-drama-forge/
-minimax-video-pipeline-skill/
+baidupan
+drama-forge
+minimax-video-pipeline-skill
 
-# adversaria → _sources/adversaria/skills/
-crucible/
-devils-advocate/
-steelman/
-verdict/
+# adversaria → _sources/adversaria/skills
+crucible
+devils-advocate
+steelman
+verdict
 
 # embed-ai-tool 共享脚本 → _sources/embed-ai-tool/shared
 shared/

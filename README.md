@@ -5,8 +5,8 @@
 ## 🆕 新电脑初始化
 
 ```bash
-# 1. 克隆根仓库（含所有子模块）
-git clone --recurse-submodules https://github.com/ez-xu/skills-tree.git ~/.agents/skills
+# 1. 克隆根仓库（含所有子模块，--remote-submodules 直接跟踪远端最新）
+git clone --recurse-submodules --remote-submodules https://github.com/ez-xu/skills-tree.git ~/.agents/skills
 
 # 2. 创建技能链接（Windows 用 PowerShell Junction）
 cd ~/.agents/skills
@@ -17,11 +17,18 @@ bash _sync.sh
 
 ## 🔄 日常更新
 
+> 所有子模块已在 `.gitmodules` 中声明 `branch`，以下命令会把全部技能组件更新到各自远端最新分支：
+
 ```bash
-# 更新所有子模块到最新版本
+# 更新所有子模块到最新版本（跟随声明的分支）
 cd ~/.agents/skills
 git pull
-git submodule update --remote --recursive
+git submodule update --init --remote --recursive
+
+# 子模块指针已漂移，提交固定新版本
+git add _sources/ easyeda-api
+git commit -m "chore(skills): 更新子模块到最新版本"
+
 bash _sync.sh
 ```
 
@@ -68,3 +75,4 @@ bash _sync.sh
 
 - **feat**: 注册 drama-forge 视频生成技能（`tree`）
 - **chore**: 忽略 baidupan/drama-forge 链接目录（`gitignore`）
+- **chore**: 子模块声明 branch 并更新至远端最新（`gitmodules`）

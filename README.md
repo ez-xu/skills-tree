@@ -71,6 +71,10 @@ bash _sync.sh
 
 <!-- 新条目添加在最上方 -->
 
+### 2026-08-13
+
+- **refactor**: `git-commit-assistant` 更名为 `git-commit-helper`——移除 claude-skills 源中的别名映射，链接名对齐上游技能目录名（`tree`、`gitignore`）
+
 ### 2026-08-11
 
 - **feat**: 注册 drama-forge 视频生成技能（`tree`）

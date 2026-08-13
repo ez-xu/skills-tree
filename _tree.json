@@ -204,7 +204,6 @@
         "project-diff 工程变更比对"
       ],
       "aliases": {
-        "git-commit-helper": "git-commit-assistant",
         "project-diff 工程变更比对": "project-diff"
       }
     },
@@ -326,7 +325,7 @@
     "devops": {
       "label": "🔧 研发协作",
       "skills": [
-        "git-commit-assistant",
+        "git-commit-helper",
         "gitlab-download",
         "gitlab-upload",
         "project-diff",

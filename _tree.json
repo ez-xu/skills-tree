@@ -126,6 +126,7 @@
       "path": "_sources/jinghan-xu-skills",
       "skills_dir": "skills",
       "skills": [
+        "firmware-release-skill",
         "gitlab-download",
         "gitlab-upload",
         "usb-can-debug"
@@ -325,6 +326,7 @@
     "devops": {
       "label": "🔧 研发协作",
       "skills": [
+        "firmware-release-skill",
         "git-commit-helper",
         "gitlab-download",
         "gitlab-upload",

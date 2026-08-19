@@ -20,11 +20,56 @@ NC     = "\033[0m"
 def log(msg):
     print(msg)
 
+def is_link(p: Path) -> bool:
+    """跨平台判断 symlink / Windows junction。
+
+    Python 的 Path.is_symlink() 在 Windows 上不识别 junction
+    （_sync 创建链接用的就是 junction），需要按 reparse point 检测。
+    """
+    if p.is_symlink():
+        return True
+    if IS_WINDOWS:
+        try:
+            return bool(p.lstat().st_file_attributes & 0x400)  # FILE_ATTRIBUTE_REPARSE_POINT
+        except (AttributeError, OSError):
+            return False
+    return False
+
+def remove_link(path: Path):
+    """删除链接/junction 本身，不触碰目标目录。"""
+    try:
+        os.rmdir(path)   # junction 视为空目录，rmdir 仅移除联接
+    except OSError:
+        path.unlink()    # 符号链接
+
+def cleanup_stale_links(tree: dict):
+    """清理未登记的残留链接（如技能改名后遗留的旧链接）。
+
+    保留名单来自 _tree.json 的 extra_links（共享资源等非技能目录），
+    其余根目录下指向外部的链接一律删除。
+    """
+    expected = set(tree.get("extra_links", []))
+    for src in tree["sources"]:
+        for skill in src["skills"]:
+            expected.add(src.get("aliases", {}).get(skill, skill))
+
+    removed = []
+    for p in sorted(SKILLS_DIR.iterdir()):
+        if p.name.startswith(".") or p.name == "_sources" or not is_link(p):
+            continue
+        if p.name not in expected:
+            remove_link(p)
+            removed.append(p.name)
+
+    if removed:
+        log(f"  {YELLOW}[!]{NC} 清理未登记链接: {', '.join(removed)}")
+    return removed
+
 def create_link(name, target):
     link = SKILLS_DIR / name
     src = (SKILLS_DIR / target).resolve()
 
-    if link.is_symlink():
+    if is_link(link):
         return
     if link.is_dir():
         log(f"  {YELLOW}[!]{NC} 移除实体副本: {name}/")
@@ -69,10 +114,17 @@ def main():
                 log(f"  {RED}[X]{NC} {skill}: 源路径不存在")
         log("")
 
+    # ── 清理残留链接 ─────────────────────────────────
+    log(f"{YELLOW}[{n+1}/{n+2}]{NC} 清理未登记链接...")
+    removed = cleanup_stale_links(tree)
+    if not removed:
+        log("  无残留")
+    log("")
+
     # ── 校验 ────────────────────────────────────────
     # 基于 _tree.json 注册清单校验（而非遍历文件系统），
     # 避免把 shared 等共享资源目录误判为技能。
-    log(f"{YELLOW}[{n+1}/{n+2}]{NC} 校验技能完整性...")
+    log(f"{YELLOW}[{n+2}/{n+3}]{NC} 校验技能完整性...")
     total = 0
     missed = 0
 
@@ -94,7 +146,7 @@ def main():
         log(f"\n  {RED}{missed}/{total} 个技能缺失{NC}")
 
     # ── 生成 _tree.md ───────────────────────────────
-    log(f"\n{YELLOW}[{n+2}/{n+2}]{NC} 生成 _tree.md...")
+    log(f"\n{YELLOW}[{n+3}/{n+3}]{NC} 生成 _tree.md...")
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     md = []

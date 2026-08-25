@@ -250,18 +250,6 @@
       "skills": [
         "drama-forge"
       ]
-    },
-    {
-      "name": "adversaria",
-      "remote": "https://github.com/damionrashford/Adversaria.git",
-      "path": "_sources/adversaria",
-      "skills_dir": "skills",
-      "skills": [
-        "crucible",
-        "devils-advocate",
-        "steelman",
-        "verdict"
-      ]
     }
   ],
   "categories": {

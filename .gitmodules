@@ -78,10 +78,6 @@
 	path = _sources/claude-skills
 	url = https://github.com/LiTianYun/claude-skills.git
 	branch = master
-[submodule "_sources/adversaria"]
-	path = _sources/adversaria
-	url = https://github.com/damionrashford/Adversaria.git
-	branch = main
 [submodule "_sources/baidupan"]
 	path = _sources/baidupan
 	url = https://github.com/ez-xu/baidupan.git

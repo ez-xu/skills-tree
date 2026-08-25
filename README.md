@@ -71,6 +71,11 @@ bash _sync.sh
 
 <!-- 新条目添加在最上方 -->
 
+### 2026-08-25
+
+- **chore**: 移除 adversaria 插件（`tree`、`gitignore`、`gitmodules`、Claude 插件注册、`adv` 命令、agent-memory）
+- **feat**: 注册 RedTeam 反驳技能——danielmiessler/Personal_AI_Infrastructure（18.7k star）（`tree`、`gitignore`、`gitmodules`）
+
 ### 2026-08-13
 
 - **refactor**: `git-commit-assistant` 更名为 `git-commit-helper`——移除 claude-skills 源中的别名映射，链接名对齐上游技能目录名（`tree`、`gitignore`）

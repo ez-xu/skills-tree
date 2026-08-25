@@ -75,6 +75,7 @@ bash _sync.sh
 
 - **chore**: 移除 adversaria 插件（`tree`、`gitignore`、`gitmodules`、Claude 插件注册、`adv` 命令、agent-memory）
 - **feat**: 注册 RedTeam 反驳技能——danielmiessler/Personal_AI_Infrastructure（18.7k star）（`tree`、`gitignore`、`gitmodules`）
+- **chore**: 忽略 arkcli connect 自动安装的技能目录（`gitignore`）
 
 ### 2026-08-13
 

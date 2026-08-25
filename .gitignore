@@ -121,6 +121,33 @@ minimax-video-pipeline-skill
 # embed-ai-tool 共享脚本 → _sources/embed-ai-tool/shared
 shared/
 
+# arkcli connect 自动安装的技能（实体目录，非 junction，由 arkcli 管理）
+.arkcli-managed-skills.json
+arkcli-agent/
+arkcli-api-explorer/
+arkcli-auth/
+arkcli-billing/
+arkcli-chat/
+arkcli-code-example/
+arkcli-config/
+arkcli-connect/
+arkcli-custommodel/
+arkcli-deploy/
+arkcli-doctor/
+arkcli-gen/
+arkcli-helper/
+arkcli-infer-endpoint/
+arkcli-models/
+arkcli-onboard/
+arkcli-plans/
+arkcli-pricing/
+arkcli-profile/
+arkcli-resources/
+arkcli-shared/
+arkcli-train-finetune/
+arkcli-understand/
+arkcli-usage/
+
 # 内部管理目录
 _sources/
 _tree.md

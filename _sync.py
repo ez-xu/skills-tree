@@ -70,7 +70,15 @@ def create_link(name, target):
     src = (SKILLS_DIR / target).resolve()
 
     if is_link(link):
-        return
+        # 链接已存在：若目标与登记不一致（如技能换了来源仓库），重建
+        try:
+            cur = link.resolve()
+            if os.path.normcase(str(cur)) == os.path.normcase(str(src)):
+                return
+            log(f"  {YELLOW}[~]{NC} {name}: 目标变更 -> {target}")
+            remove_link(link)
+        except OSError:
+            remove_link(link)
     if link.is_dir():
         log(f"  {YELLOW}[!]{NC} 移除实体副本: {name}/")
         shutil.rmtree(str(link), ignore_errors=True)

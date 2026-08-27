@@ -37,6 +37,7 @@ build-keil
 build-makefile
 build-platformio
 # jinghan-xu-skills → _sources/jinghan-xu-skills/skills
+git-commit-helper
 firmware-release-skill
 gitlab-download
 gitlab-upload
@@ -94,7 +95,6 @@ wrapped-video
 kinetic-typography
 
 # LiTianYun/claude-skills → _sources/claude-skills
-git-commit-helper
 project-diff
 
 # obra/superpowers → _sources/superpowers/skills

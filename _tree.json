@@ -129,6 +129,7 @@
       "path": "_sources/jinghan-xu-skills",
       "skills_dir": "skills",
       "skills": [
+        "git-commit-helper",
         "firmware-release-skill",
         "gitlab-download",
         "gitlab-upload",
@@ -204,7 +205,6 @@
       "path": "_sources/claude-skills",
       "skills_dir": ".",
       "skills": [
-        "git-commit-helper",
         "project-diff 工程变更比对"
       ],
       "aliases": {

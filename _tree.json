@@ -129,7 +129,6 @@
       "path": "_sources/jinghan-xu-skills",
       "skills_dir": "skills",
       "skills": [
-        "git-commit-helper",
         "firmware-release-skill",
         "gitlab-download",
         "gitlab-upload",
@@ -205,6 +204,7 @@
       "path": "_sources/claude-skills",
       "skills_dir": ".",
       "skills": [
+        "git-commit-helper",
         "project-diff 工程变更比对"
       ],
       "aliases": {
@@ -249,6 +249,43 @@
       "skills_dir": ".",
       "skills": [
         "drama-forge"
+      ]
+    },
+    {
+      "name": "adversaria",
+      "remote": "https://github.com/damionrashford/Adversaria.git",
+      "path": "_sources/adversaria",
+      "skills_dir": "skills",
+      "skills": [
+        "crucible",
+        "devils-advocate",
+        "steelman",
+        "verdict"
+      ]
+    },
+    {
+      "name": "openvela-claude",
+      "remote": "https://github.com/ez-xu/.claude.git",
+      "path": "_sources/openvela-claude",
+      "skills_dir": "skills",
+      "skills": [
+        "api-doc-check",
+        "book-manuscript-reviewer",
+        "codesize",
+        "contest-log-collector",
+        "driver-code-reviewer",
+        "executor",
+        "kconfig-tweak",
+        "memdump",
+        "nuttx-driver-development",
+        "openvela-board-port",
+        "openvela-build",
+        "openvela-quickstart",
+        "pcm-audio",
+        "skill-creator",
+        "submit-pr",
+        "tech-doc-reviewer",
+        "tmux"
       ]
     }
   ],
@@ -379,6 +416,28 @@
       "label": "☁️ 网盘工具",
       "skills": [
         "baidupan"
+      ]
+    },
+    "openvela": {
+      "label": "🚀 openvela 大赛",
+      "skills": [
+        "api-doc-check",
+        "book-manuscript-reviewer",
+        "codesize",
+        "contest-log-collector",
+        "driver-code-reviewer",
+        "executor",
+        "kconfig-tweak",
+        "memdump",
+        "nuttx-driver-development",
+        "openvela-board-port",
+        "openvela-build",
+        "openvela-quickstart",
+        "pcm-audio",
+        "skill-creator",
+        "submit-pr",
+        "tech-doc-reviewer",
+        "tmux"
       ]
     }
   }

@@ -283,7 +283,8 @@
         "pcm-audio",
         "submit-pr",
         "tech-doc-reviewer",
-        "tmux"
+        "tmux",
+        "openvela-driver-workflow"
       ]
     }
   ],
@@ -433,7 +434,8 @@
         "pcm-audio",
         "submit-pr",
         "tech-doc-reviewer",
-        "tmux"
+        "tmux",
+        "openvela-driver-workflow"
       ]
     }
   }

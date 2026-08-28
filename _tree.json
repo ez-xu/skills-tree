@@ -229,8 +229,7 @@
         "using-git-worktrees",
         "using-superpowers",
         "verification-before-completion",
-        "writing-plans",
-        "writing-skills"
+        "writing-plans"
       ]
     },
     {
@@ -265,7 +264,7 @@
     },
     {
       "name": "openvela-claude",
-      "remote": "https://github.com/ez-xu/.claude.git",
+      "remote": "https://github.com/ez-xu/openvela-skills.git",
       "path": "_sources/openvela-claude",
       "skills_dir": "skills",
       "skills": [
@@ -282,7 +281,6 @@
         "openvela-build",
         "openvela-quickstart",
         "pcm-audio",
-        "skill-creator",
         "submit-pr",
         "tech-doc-reviewer",
         "tmux"
@@ -408,8 +406,7 @@
         "using-git-worktrees",
         "using-superpowers",
         "verification-before-completion",
-        "writing-plans",
-        "writing-skills"
+        "writing-plans"
       ]
     },
     "netdisk": {
@@ -434,7 +431,6 @@
         "openvela-build",
         "openvela-quickstart",
         "pcm-audio",
-        "skill-creator",
         "submit-pr",
         "tech-doc-reviewer",
         "tmux"

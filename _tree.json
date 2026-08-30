@@ -268,8 +268,6 @@
       "path": "_sources/openvela-claude",
       "skills_dir": "skills",
       "skills": [
-        "api-doc-check",
-        "book-manuscript-reviewer",
         "codesize",
         "contest-log-collector",
         "driver-code-reviewer",
@@ -277,14 +275,12 @@
         "kconfig-tweak",
         "memdump",
         "nuttx-driver-development",
-        "openvela-board-port",
         "openvela-build",
         "openvela-quickstart",
         "pcm-audio",
+        "skill-creator",
         "submit-pr",
-        "tech-doc-reviewer",
-        "tmux",
-        "openvela-driver-workflow"
+        "tmux"
       ]
     }
   ],
@@ -419,8 +415,6 @@
     "openvela": {
       "label": "🚀 openvela 大赛",
       "skills": [
-        "api-doc-check",
-        "book-manuscript-reviewer",
         "codesize",
         "contest-log-collector",
         "driver-code-reviewer",
@@ -428,14 +422,12 @@
         "kconfig-tweak",
         "memdump",
         "nuttx-driver-development",
-        "openvela-board-port",
         "openvela-build",
         "openvela-quickstart",
         "pcm-audio",
+        "skill-creator",
         "submit-pr",
-        "tech-doc-reviewer",
-        "tmux",
-        "openvela-driver-workflow"
+        "tmux"
       ]
     }
   }

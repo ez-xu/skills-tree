@@ -118,6 +118,21 @@ baidupan
 drama-forge
 minimax-video-pipeline-skill
 
+# ez-xu/openvela-skills fork → _sources/openvela-claude/skills
+codesize
+contest-log-collector
+driver-code-reviewer
+executor
+kconfig-tweak
+memdump
+nuttx-driver-development
+openvela-build
+openvela-quickstart
+pcm-audio
+skill-creator
+submit-pr
+tmux
+
 # embed-ai-tool 共享脚本 → _sources/embed-ai-tool/shared
 shared/
 

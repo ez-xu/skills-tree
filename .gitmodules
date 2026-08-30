@@ -90,3 +90,7 @@
 	path = _sources/openvela-claude
 	url = https://github.com/ez-xu/openvela-skills.git
 	branch = dev-ai-contest-2026
+[submodule "_sources/two-way-steelman"]
+	path = _sources/two-way-steelman
+	url = https://github.com/chen1pengvincent/two-way-steelman.git
+	branch = main

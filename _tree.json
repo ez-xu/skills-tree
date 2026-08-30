@@ -251,15 +251,12 @@
       ]
     },
     {
-      "name": "adversaria",
-      "remote": "https://github.com/damionrashford/Adversaria.git",
-      "path": "_sources/adversaria",
-      "skills_dir": "skills",
+      "name": "two-way-steelman",
+      "remote": "https://github.com/chen1pengvincent/two-way-steelman.git",
+      "path": "_sources/two-way-steelman",
+      "skills_dir": ".",
       "skills": [
-        "crucible",
-        "devils-advocate",
-        "steelman",
-        "verdict"
+        "two-way-steelman"
       ]
     },
     {
@@ -404,6 +401,12 @@
         "using-superpowers",
         "verification-before-completion",
         "writing-plans"
+      ]
+    },
+    "thinking": {
+      "label": "🧠 思维方法",
+      "skills": [
+        "two-way-steelman"
       ]
     },
     "netdisk": {

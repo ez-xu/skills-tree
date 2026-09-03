@@ -94,3 +94,7 @@
 	path = _sources/two-way-steelman
 	url = https://github.com/chen1pengvincent/two-way-steelman.git
 	branch = main
+[submodule "_sources/agent-reach"]
+	path = _sources/agent-reach
+	url = https://github.com/Panniantong/Agent-Reach.git
+	branch = main

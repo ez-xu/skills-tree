@@ -130,6 +130,7 @@
       "skills_dir": "skills",
       "skills": [
         "firmware-release-skill",
+        "git-commit-helper",
         "gitlab-download",
         "gitlab-upload",
         "usb-can-debug"
@@ -204,7 +205,6 @@
       "path": "_sources/claude-skills",
       "skills_dir": ".",
       "skills": [
-        "git-commit-helper",
         "project-diff 工程变更比对"
       ],
       "aliases": {
@@ -278,6 +278,15 @@
         "skill-creator",
         "submit-pr",
         "tmux"
+      ]
+    },
+    {
+      "name": "agent-reach",
+      "remote": "https://github.com/Panniantong/Agent-Reach.git",
+      "path": "_sources/agent-reach",
+      "skills_dir": "agent_reach/skill",
+      "skills": [
+        "agent-reach"
       ]
     }
   ],
@@ -431,6 +440,12 @@
         "skill-creator",
         "submit-pr",
         "tmux"
+      ]
+    },
+    "research": {
+      "label": "🌐 互联网调研",
+      "skills": [
+        "agent-reach"
       ]
     }
   }

@@ -119,18 +119,24 @@ drama-forge
 minimax-video-pipeline-skill
 
 # ez-xu/openvela-skills fork → _sources/openvela-claude/skills
+api-doc-check
+book-manuscript-reviewer
 codesize
 contest-log-collector
 driver-code-reviewer
+esp32p4-flash
 executor
 kconfig-tweak
 memdump
 nuttx-driver-development
+openvela-board-port
 openvela-build
+openvela-driver-workflow
 openvela-quickstart
 pcm-audio
 skill-creator
 submit-pr
+tech-doc-reviewer
 tmux
 
 # chen1pengvincent/two-way-steelman → _sources/two-way-steelman (SKILL.md 在仓库根)

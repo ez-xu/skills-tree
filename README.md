@@ -103,6 +103,12 @@ python _sync.py
 
 <!-- 新条目添加在最上方 -->
 
+### 2026-09-04
+
+- **chore**: 同步所有子模块到各自远端最新(10 个子模块指针更新)
+- **feat**: openvela-claude 子模块改跟踪 `dev` 分支,登记 6 个新技能(api-doc-check、book-manuscript-reviewer、esp32p4-flash、openvela-board-port、openvela-driver-workflow、tech-doc-reviewer,`tree`、`gitignore`、`gitmodules`)
+- **fix**: 清理已废弃的 adversaria 残留链接(crucible/devils-advocate/steelman/verdict,`tree`)
+
 ### 2026-08-30
 
 - **feat**: 注册 two-way-steelman 双向钢人论证技能(chen1pengvincent/two-way-steelman,`tree`、`gitignore`、`gitmodules`),新增「🧠 思维方法」分类

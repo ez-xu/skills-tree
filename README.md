@@ -1,13 +1,13 @@
 # 🌳 技能树
 
-> 统一管理 **102 个 Agent Skills** 的 Git 子模块树,通过 Junction 链接暴露给所有支持 Agent Skills 标准的运行时(Claude Code、DSH、Codex CLI、Gemini CLI 等)。
+> 统一管理 **90 个 Agent Skills** 的 Git 子模块树,通过 Junction 链接暴露给所有支持 Agent Skills 标准的运行时(Claude Code、DSH、Codex CLI、Gemini CLI 等)。
 > 每个技能源是独立的 git 子模块,技能本体由上游仓库维护,本仓库只管理**登记表**与**链接**。
 
 ## 这是什么
 
 - **格式**: [Agent Skills 开放标准](https://agentskills.io/specification)(`SKILL.md` + YAML frontmatter),一个文件夹即可安装到支持该标准的任意 Agent。
 - **技能存储位置**: 技能本体存放在 `_sources/<来源名>/`(git 子模块),根目录的 `two-way-steelman`、`codesize` 等目录是 **Windows Junction 链接**,指向 `_sources/` 里的真实技能目录。
-- **它解决什么**: 用一棵树管理 24 个技能源、102 个技能,每个源可独立更新、独立追踪版本,根目录链接自动同步。
+- **它解决什么**: 用一棵树管理 21 个技能源、90 个技能,每个源可独立更新、独立追踪版本,根目录链接自动同步。
 
 ## 安装位置说明
 
@@ -19,7 +19,6 @@
 | kicad-happy | [aklofas/kicad-happy](https://github.com/aklofas/kicad-happy) | `_sources/kicad-happy/skills/` | 11 |
 | OfficeCLI | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | `_sources/OfficeCLI/skills/` | 10 |
 | superpowers | [obra/superpowers](https://github.com/obra/superpowers) | `_sources/superpowers/skills/` | 13 |
-| openvela-claude | [ez-xu/openvela-skills](https://github.com/ez-xu/openvela-skills) | `_sources/openvela-claude/skills/` | 13 |
 | iart-ai 视频系列 | [iart-ai/tiktok-video-skills](https://github.com/iart-ai/tiktok-video-skills) 等 4 仓 | `_sources/*-video-skills/skills/` | 14 |
 | jinghan-xu-skills | [ez-xu/jinghan-xu-skills](https://github.com/ez-xu/jinghan-xu-skills) | `_sources/jinghan-xu-skills/skills/` | 4 |
 | orca | [stablyai/orca](https://github.com/stablyai/orca) | `_sources/orca/skills/` | 3 |
@@ -70,20 +69,19 @@ python _sync.py
 
 ```
 .agents/skills/                  # git clone 到此目录
-├── _sync.py                     # 一键创建 Junction + 校验(102 技能)
+├── _sync.py                     # 一键创建 Junction + 校验(90 技能)
 ├── _tree.json                   # 技能分类树定义(来源登记 + 分类)
 ├── _tree.md                     # 自动生成的可视化文档
-├── _sources/                    # 24 个 git 子模块(技能本体)
+├── _sources/                    # 21 个 git 子模块(技能本体)
 │   ├── embed-ai-tool/           # LeoKemp223/embed-ai-tool (23 技能)
 │   ├── kicad-happy/             # aklofas/kicad-happy (11 技能)
 │   ├── OfficeCLI/               # iOfficeAI/OfficeCLI (10 技能)
 │   ├── superpowers/             # obra/superpowers (13 技能)
-│   ├── openvela-claude/         # ez-xu/openvela-skills (13 技能)
 │   ├── two-way-steelman/        # chen1pengvincent/two-way-steelman (1 技能)
-│   └── ...                      # 其余 18 个子模块
+│   └── ...                      # 其余 16 个子模块
 │
 ├── two-way-steelman ──┐
-├── codesize           ├── 102 个 Junction → _sources/*/skills/* 或 _sources/*/
+├── codesize           ├── 90 个 Junction → _sources/*/skills/* 或 _sources/*/
 ├── kicad              │   (由 _sync.py 创建,不纳入 git)
 └── ...               ──┘
 ```
@@ -102,6 +100,10 @@ python _sync.py
 ## 变更日志
 
 <!-- 新条目添加在最上方 -->
+
+### 2026-09-04
+
+- **chore**: 移除 openvela-claude 源(ez-xu/openvela-skills,19 技能,`tree`、`gitignore`、`gitmodules`),删除对应子模块与链接
 
 ### 2026-09-04
 

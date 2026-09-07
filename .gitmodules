@@ -86,10 +86,6 @@
 	path = _sources/minimax-video-pipeline-skill
 	url = https://github.com/ez-xu/drama-forge.git
 	branch = master
-[submodule "_sources/openvela-claude"]
-	path = _sources/openvela-claude
-	url = https://github.com/ez-xu/openvela-skills.git
-	branch = dev
 [submodule "_sources/two-way-steelman"]
 	path = _sources/two-way-steelman
 	url = https://github.com/chen1pengvincent/two-way-steelman.git

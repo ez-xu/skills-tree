@@ -94,3 +94,8 @@
 	path = _sources/agent-reach
 	url = https://github.com/Panniantong/Agent-Reach.git
 	branch = main
+
+[submodule "_sources/yylo-skills"]
+	path = _sources/yylo-skills
+	url = https://github.com/yylo-dev/yylo-skills.git
+	branch = main

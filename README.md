@@ -20,6 +20,7 @@
 | OfficeCLI | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | `_sources/OfficeCLI/skills/` | 10 |
 | superpowers | [obra/superpowers](https://github.com/obra/superpowers) | `_sources/superpowers/skills/` | 13 |
 | iart-ai 视频系列 | [iart-ai/tiktok-video-skills](https://github.com/iart-ai/tiktok-video-skills) 等 4 仓 | `_sources/*-video-skills/skills/` | 14 |
+| yylo-skills | [yylo-dev/yylo-skills](https://github.com/yylo-dev/yylo-skills) | `_sources/yylo-skills/skills/` | 7 |
 | jinghan-xu-skills | [ez-xu/jinghan-xu-skills](https://github.com/ez-xu/jinghan-xu-skills) | `_sources/jinghan-xu-skills/skills/` | 4 |
 | orca | [stablyai/orca](https://github.com/stablyai/orca) | `_sources/orca/skills/` | 3 |
 | qt-agent-skills | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | `_sources/qt-agent-skills/skills/` | 2 |
@@ -100,6 +101,10 @@ python _sync.py
 ## 变更日志
 
 <!-- 新条目添加在最上方 -->
+
+### 2026-09-11
+
+- **feat**: 注册 yylo-skills 技能源(yylo-dev/yylo-skills,7 技能,`tree`、`gitignore`、`gitmodules`),归入「🔧 研发协作」分类
 
 ### 2026-09-04
 

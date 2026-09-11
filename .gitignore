@@ -154,6 +154,15 @@ arkcli-train-finetune/
 arkcli-understand/
 arkcli-usage/
 
+# yylo-dev/yylo-skills → _sources/yylo-skills/skills
+artifact-yylo
+ledger-tasks-yylo
+plan-ledger-tasks-yylo
+ralph-loop-yylo
+understand-project-yylo
+wiki-yylo
+workflow-yylo
+
 # 内部管理目录
 _sources/
 _tree.md

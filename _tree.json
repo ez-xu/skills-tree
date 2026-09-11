@@ -213,6 +213,21 @@
       "skills": [
         "agent-reach"
       ]
+    },
+    {
+      "name": "yylo-skills",
+      "remote": "https://github.com/yylo-dev/yylo-skills.git",
+      "path": "_sources/yylo-skills",
+      "skills_dir": "skills",
+      "skills": [
+        "artifact-yylo",
+        "ledger-tasks-yylo",
+        "plan-ledger-tasks-yylo",
+        "ralph-loop-yylo",
+        "understand-project-yylo",
+        "wiki-yylo",
+        "workflow-yylo"
+      ]
     }
   ],
   "categories": {
@@ -287,7 +302,14 @@
         "project-diff",
         "qt-cpp-review",
         "qt-ui-design",
-        "hallmark"
+        "hallmark",
+        "artifact-yylo",
+        "ledger-tasks-yylo",
+        "plan-ledger-tasks-yylo",
+        "ralph-loop-yylo",
+        "understand-project-yylo",
+        "wiki-yylo",
+        "workflow-yylo"
       ]
     },
     "infra": {

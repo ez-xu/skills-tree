@@ -123,6 +123,9 @@ two-way-steelman
 # Panniantong/Agent-Reach → _sources/agent-reach/agent_reach/skill
 agent-reach
 
+# ez-xu/push-release-pipeline-skill → _sources/push-release-pipeline-skill (SKILL.md 在仓库根)
+push-release-pipeline-skill
+
 # embed-ai-tool 共享脚本 → _sources/embed-ai-tool/shared
 shared/
 

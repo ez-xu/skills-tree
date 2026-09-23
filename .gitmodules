@@ -94,3 +94,7 @@
 	path = _sources/agent-reach
 	url = https://github.com/Panniantong/Agent-Reach.git
 	branch = main
+[submodule "_sources/push-release-pipeline-skill"]
+	path = _sources/push-release-pipeline-skill
+	url = https://github.com/ez-xu/push-release-pipeline-skill.git
+	branch = main

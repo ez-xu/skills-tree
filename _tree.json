@@ -212,6 +212,15 @@
       "skills": [
         "agent-reach"
       ]
+    },
+    {
+      "name": "push-release-pipeline",
+      "remote": "https://github.com/ez-xu/push-release-pipeline-skill.git",
+      "path": "_sources/push-release-pipeline-skill",
+      "skills_dir": ".",
+      "skills": [
+        "push-release-pipeline-skill"
+      ]
     }
   ],
   "categories": {
@@ -285,7 +294,8 @@
         "project-diff",
         "qt-cpp-review",
         "qt-ui-design",
-        "hallmark"
+        "hallmark",
+        "push-release-pipeline-skill"
       ]
     },
     "infra": {

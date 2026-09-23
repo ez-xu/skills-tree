@@ -30,6 +30,7 @@
 | agent-skill-creator | [FrancyJGLisboa/agent-skill-creator](https://github.com/FrancyJGLisboa/agent-skill-creator) | `_sources/agent-skill-creator/` | 1 |
 | baidupan | [ez-xu/baidupan](https://github.com/ez-xu/baidupan) | `_sources/baidupan/` | 1 |
 | drama-forge | [ez-xu/drama-forge](https://github.com/ez-xu/drama-forge) | `_sources/minimax-video-pipeline-skill/` | 1 |
+| push-release-pipeline | [ez-xu/push-release-pipeline-skill](https://github.com/ez-xu/push-release-pipeline-skill) | `_sources/push-release-pipeline-skill/`(SKILL.md 在仓库根) | 1 |
 | **two-way-steelman** | [chen1pengvincent/two-way-steelman](https://github.com/chen1pengvincent/two-way-steelman) | `_sources/two-way-steelman/`(SKILL.md 在仓库根) | 1 |
 | 其他(mattpocock、addyosmani 等) | — | `_sources/<name>/` | — |
 
@@ -103,6 +104,7 @@ python _sync.py
 
 ### 2026-09-23
 
+- **feat**: 注册 push-release-pipeline-skill 发布流水线技能(新建独立仓库 [ez-xu/push-release-pipeline-skill](https://github.com/ez-xu/push-release-pipeline-skill),SKILL.md 在仓库根,`tree`、`gitignore`、`gitmodules`),归入「🔧 研发协作」分类
 - **chore**: 移除 firmware-release-skill 固件发布技能(jinghan-xu-skills 源,`tree`、`gitignore`、链接与源目录)
 
 ### 2026-09-04

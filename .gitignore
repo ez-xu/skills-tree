@@ -38,7 +38,6 @@ build-makefile
 build-platformio
 # jinghan-xu-skills → _sources/jinghan-xu-skills/skills
 git-commit-helper
-firmware-release-skill
 gitlab-download
 gitlab-upload
 usb-can-debug

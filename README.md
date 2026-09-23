@@ -101,6 +101,10 @@ python _sync.py
 
 <!-- 新条目添加在最上方 -->
 
+### 2026-09-23
+
+- **chore**: 移除 firmware-release-skill 固件发布技能(jinghan-xu-skills 源,`tree`、`gitignore`、链接与源目录)
+
 ### 2026-09-04
 
 - **chore**: 移除 openvela-claude 源(ez-xu/openvela-skills,19 技能,`tree`、`gitignore`、`gitmodules`),删除对应子模块与链接

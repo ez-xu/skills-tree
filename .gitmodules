@@ -70,10 +70,6 @@
 	path = _sources/superpowers
 	url = https://github.com/obra/superpowers.git
 	branch = main
-[submodule "_sources/claude-skills"]
-	path = _sources/claude-skills
-	url = https://github.com/LiTianYun/claude-skills.git
-	branch = master
 [submodule "_sources/baidupan"]
 	path = _sources/baidupan
 	url = https://github.com/ez-xu/baidupan.git

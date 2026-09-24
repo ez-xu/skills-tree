@@ -89,7 +89,7 @@ def link_agent_dirs(tree: dict):
     expected = expected_links(tree)
     extra = set(tree.get("extra_links", []))
     home = Path.home()
-    created, repaired, whole, absent, real = [], [], [], [], []
+    created, repaired, stale, whole, absent, real = [], [], [], [], [], []
 
     for agent in AGENT_DIRS:
         d = home / agent / "skills"
@@ -122,14 +122,32 @@ def link_agent_dirs(tree: dict):
                 link.symlink_to(src, target_is_directory=True)
             created.append(f"{agent}/{name}")
 
+        # 清理死链：指向本树、但已不在登记表里的链接（技能被移除后留下的）。
+        # 只删链接本身；实体目录、.system/ 等非链接内容永不触碰。
+        tree_prefix = os.path.normcase(str(SKILLS_DIR))
+        for e in sorted(d.iterdir()):
+            if e.name.startswith('.') or e.name in expected or not is_link(e):
+                continue
+            try:
+                tgt = os.path.normcase(os.readlink(e))
+            except OSError:
+                continue              # 读不出目标就保守放过
+            if tree_prefix not in tgt:
+                continue              # 不归本树管，放过
+            remove_link(e)
+            stale.append(f"{agent}/{e.name}")
+
     for a in whole:
         log(f"  {GREEN}[OK]{NC} {a}: 整目录 Junction，自动跟随")
     for a in real:
         n = sum(1 for x in created if x.startswith(f"{a}/"))
         r = sum(1 for x in repaired if x.startswith(f"{a}/"))
-        log(f"  {GREEN}[OK]{NC} {a}: 真实目录，逐条同步（新建 {n}，重建 {r}）")
+        s = sum(1 for x in stale if x.startswith(f"{a}/"))
+        log(f"  {GREEN}[OK]{NC} {a}: 真实目录，逐条同步（新建 {n}，重建 {r}，清理死链 {s}）")
     for a in absent:
         log(f"  {YELLOW}[-]{NC} {a}: 未安装，跳过")
+    if stale:
+        log(f"  {YELLOW}[!]{NC} 清理死链 {len(stale)} 条: {', '.join(stale)}")
 
     # 复核：真实目录型 Agent 的每一条链接都要真能读到 SKILL.md，
     # 否则"新建 0 条"这种输出会掩盖"整类被静默跳过"——Codex 就是这么烂掉的。
@@ -146,7 +164,7 @@ def link_agent_dirs(tree: dict):
             + (" ..." if len(missing) > 10 else ""))
     else:
         log(f"  {GREEN}[OK]{NC} {len(real)} 个真实目录型 Agent × {len(expected)} 条链接，全部可达")
-    return created, repaired, missing
+    return created, repaired, stale, missing
 
 def create_link(name, target):
     link = SKILLS_DIR / name
@@ -218,7 +236,7 @@ def main():
         log(f"  {YELLOW}[-]{NC} 已用 --no-agents 跳过")
         agent_missing = []
     else:
-        _, _, agent_missing = link_agent_dirs(tree)
+        _, _, _, agent_missing = link_agent_dirs(tree)
     log("")
 
     # ── 校验 ────────────────────────────────────────

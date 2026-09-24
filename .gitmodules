@@ -98,3 +98,7 @@
 	path = _sources/push-release-pipeline-skill
 	url = https://github.com/ez-xu/push-release-pipeline-skill.git
 	branch = main
+[submodule "_sources/daily-dev-task"]
+	path = _sources/daily-dev-task
+	url = https://github.com/ez-xu/daily-dev-task.git
+	branch = main

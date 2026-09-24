@@ -31,6 +31,7 @@
 | baidupan | [ez-xu/baidupan](https://github.com/ez-xu/baidupan) | `_sources/baidupan/` | 1 |
 | drama-forge | [ez-xu/drama-forge](https://github.com/ez-xu/drama-forge) | `_sources/minimax-video-pipeline-skill/` | 1 |
 | push-release-pipeline | [ez-xu/push-release-pipeline-skill](https://github.com/ez-xu/push-release-pipeline-skill) | `_sources/push-release-pipeline-skill/`(SKILL.md 在仓库根) | 1 |
+| daily-dev-task | [ez-xu/daily-dev-task](https://github.com/ez-xu/daily-dev-task) | `_sources/daily-dev-task/`(SKILL.md 在仓库根) | 1 |
 | **two-way-steelman** | [chen1pengvincent/two-way-steelman](https://github.com/chen1pengvincent/two-way-steelman) | `_sources/two-way-steelman/`(SKILL.md 在仓库根) | 1 |
 | 其他(mattpocock、addyosmani 等) | — | `_sources/<name>/` | — |
 
@@ -101,6 +102,10 @@ python _sync.py
 ## 变更日志
 
 <!-- 新条目添加在最上方 -->
+
+### 2026-09-24
+
+- **feat**: 注册 daily-dev-task 每日练习教练技能(新建独立仓库 [ez-xu/daily-dev-task](https://github.com/ez-xu/daily-dev-task),SKILL.md 在仓库根,`tree`、`gitignore`、`gitmodules`)。同时把根目录下的**实体目录**提为子模块 + Junction,补上漏走的登记流程;硬编码的 `C:\Users\15854\ai-lab` 参数化为 `%USERPROFILE%\ai-lab`(18 处)。新增「🎯 每日练习」分类
 
 ### 2026-09-23
 

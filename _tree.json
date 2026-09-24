@@ -221,6 +221,15 @@
       "skills": [
         "push-release-pipeline-skill"
       ]
+    },
+    {
+      "name": "daily-dev-task",
+      "remote": "https://github.com/ez-xu/daily-dev-task.git",
+      "path": "_sources/daily-dev-task",
+      "skills_dir": ".",
+      "skills": [
+        "daily-dev-task"
+      ]
     }
   ],
   "categories": {
@@ -342,6 +351,12 @@
       "label": "🌐 互联网调研",
       "skills": [
         "agent-reach"
+      ]
+    },
+    "practice": {
+      "label": "🎯 每日练习",
+      "skills": [
+        "daily-dev-task"
       ]
     }
   }

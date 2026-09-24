@@ -126,6 +126,9 @@ agent-reach
 # ez-xu/push-release-pipeline-skill → _sources/push-release-pipeline-skill (SKILL.md 在仓库根)
 push-release-pipeline-skill
 
+# ez-xu/daily-dev-task → _sources/daily-dev-task (SKILL.md 在仓库根)
+daily-dev-task
+
 # embed-ai-tool 共享脚本 → _sources/embed-ai-tool/shared
 shared/
 

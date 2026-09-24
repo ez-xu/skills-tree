@@ -42,16 +42,24 @@ def remove_link(path: Path):
     except OSError:
         path.unlink()    # 符号链接
 
+def expected_links(tree: dict) -> set:
+    """根据 _tree.json 算出根目录应有的链接名集合。
+
+    登记来源的每个技能（含 aliases 改名）+ extra_links（共享资源等非技能目录）。
+    """
+    expected = set(tree.get("extra_links", []))
+    for src in tree["sources"]:
+        for skill in src["skills"]:
+            expected.add(src.get("aliases", {}).get(skill, skill))
+    return expected
+
 def cleanup_stale_links(tree: dict):
     """清理未登记的残留链接（如技能改名后遗留的旧链接）。
 
     保留名单来自 _tree.json 的 extra_links（共享资源等非技能目录），
     其余根目录下指向外部的链接一律删除。
     """
-    expected = set(tree.get("extra_links", []))
-    for src in tree["sources"]:
-        for skill in src["skills"]:
-            expected.add(src.get("aliases", {}).get(skill, skill))
+    expected = expected_links(tree)
 
     removed = []
     for p in sorted(SKILLS_DIR.iterdir()):
@@ -64,6 +72,81 @@ def cleanup_stale_links(tree: dict):
     if removed:
         log(f"  {YELLOW}[!]{NC} 清理未登记链接: {', '.join(removed)}")
     return removed
+
+# 各 Agent 的 skills 目录（相对 HOME）。AGENTS.md 要求每个 Agent 都能看到全部技能：
+# 整目录是 Junction 的会自动跟随根目录，真实目录（如 Codex，须与自带 .system/ 共存）
+# 则必须逐条建链接，否则新技能永远不会出现——曾经的 34 条缺失就是这么来的。
+AGENT_DIRS = [".claude", ".qwen", ".codex", ".commandcode", ".kimi-code", ".codegeex"]
+
+def link_agent_dirs(tree: dict):
+    """把根目录的技能链接同步到各 Agent 的 skills 目录。
+
+    只增不删、绝不反向同步：
+      - 整目录已是 Junction 的 Agent（自动跟随根目录）直接跳过；
+      - 真实目录里的存量内容（如 Codex 的 .system/）与同名实体目录绝不触碰；
+      - 只有断链（目标已消失）才重建。
+    """
+    expected = expected_links(tree)
+    extra = set(tree.get("extra_links", []))
+    home = Path.home()
+    created, repaired, whole, absent, real = [], [], [], [], []
+
+    for agent in AGENT_DIRS:
+        d = home / agent / "skills"
+        if not d.is_dir():
+            absent.append(agent)
+            continue
+        if is_link(d):
+            whole.append(agent)
+            continue
+        real.append(agent)
+        for name in sorted(expected):
+            src = SKILLS_DIR / name
+            if not src.is_dir():
+                continue
+            link = d / name
+            if is_link(link):
+                if link.exists():
+                    continue          # 健康链接：保持原样
+                remove_link(link)     # 断链：目标已消失，先删再建
+                repaired.append(f"{agent}/{name}")
+            elif link.exists():
+                continue              # 真实目录/文件：不碰
+
+            if IS_WINDOWS:
+                subprocess.run([
+                    "powershell.exe", "-NoProfile", "-Command",
+                    f"New-Item -ItemType Junction -Path '{link}' -Target '{src}' -Force"
+                ], capture_output=True)
+            else:
+                link.symlink_to(src, target_is_directory=True)
+            created.append(f"{agent}/{name}")
+
+    for a in whole:
+        log(f"  {GREEN}[OK]{NC} {a}: 整目录 Junction，自动跟随")
+    for a in real:
+        n = sum(1 for x in created if x.startswith(f"{a}/"))
+        r = sum(1 for x in repaired if x.startswith(f"{a}/"))
+        log(f"  {GREEN}[OK]{NC} {a}: 真实目录，逐条同步（新建 {n}，重建 {r}）")
+    for a in absent:
+        log(f"  {YELLOW}[-]{NC} {a}: 未安装，跳过")
+
+    # 复核：真实目录型 Agent 的每一条链接都要真能读到 SKILL.md，
+    # 否则"新建 0 条"这种输出会掩盖"整类被静默跳过"——Codex 就是这么烂掉的。
+    missing = []
+    for a in real:
+        for name in sorted(expected):
+            p = home / a / "skills" / name
+            # extra_links 是共享资源目录（如 shared），不是技能，没有 SKILL.md
+            ok = p.is_dir() if name in extra else (p / "SKILL.md").exists()
+            if not ok:
+                missing.append(f"{a}/{name}")
+    if missing:
+        log(f"  {RED}[X]{NC} {len(missing)} 条 Agent 链接不可达: {', '.join(missing[:10])}"
+            + (" ..." if len(missing) > 10 else ""))
+    else:
+        log(f"  {GREEN}[OK]{NC} {len(real)} 个真实目录型 Agent × {len(expected)} 条链接，全部可达")
+    return created, repaired, missing
 
 def create_link(name, target):
     link = SKILLS_DIR / name
@@ -123,16 +206,25 @@ def main():
         log("")
 
     # ── 清理残留链接 ─────────────────────────────────
-    log(f"{YELLOW}[{n+1}/{n+2}]{NC} 清理未登记链接...")
+    log(f"{YELLOW}[{n+1}/{n+4}]{NC} 清理未登记链接...")
     removed = cleanup_stale_links(tree)
     if not removed:
         log("  无残留")
     log("")
 
+    # ── 同步各 Agent 的 skills 目录 ──────────────────
+    log(f"{YELLOW}[{n+2}/{n+4}]{NC} 同步各 Agent 链接...")
+    if "--no-agents" in sys.argv:
+        log(f"  {YELLOW}[-]{NC} 已用 --no-agents 跳过")
+        agent_missing = []
+    else:
+        _, _, agent_missing = link_agent_dirs(tree)
+    log("")
+
     # ── 校验 ────────────────────────────────────────
     # 基于 _tree.json 注册清单校验（而非遍历文件系统），
     # 避免把 shared 等共享资源目录误判为技能。
-    log(f"{YELLOW}[{n+2}/{n+3}]{NC} 校验技能完整性...")
+    log(f"{YELLOW}[{n+3}/{n+4}]{NC} 校验技能完整性...")
     total = 0
     missed = 0
 
@@ -154,7 +246,7 @@ def main():
         log(f"\n  {RED}{missed}/{total} 个技能缺失{NC}")
 
     # ── 生成 _tree.md ───────────────────────────────
-    log(f"\n{YELLOW}[{n+3}/{n+3}]{NC} 生成 _tree.md...")
+    log(f"\n{YELLOW}[{n+4}/{n+4}]{NC} 生成 _tree.md...")
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     md = []
@@ -180,6 +272,16 @@ def main():
         repo = src["remote"].split("/")[-1].replace(".git", "")
         md.append(f"| {src['name']} | [{repo}]({src['remote']}) | {len(src['skills'])} |")
 
+    dormant = tree.get("dormant", [])
+    if dormant:
+        md.append("\n---\n\n## 💤 保留但未注册\n")
+        md.append("> 这些仓库**留在 `_sources/` 里，但刻意不注册技能**：不建链接、不进任何 Agent 的上下文。")
+        md.append("> 要启用就把它们移进 `sources` 并加入 `categories`，再跑一次 `python _sync.py`。\n")
+        md.append("| 子模块 | 可提供技能数 | 不注册的原因 |")
+        md.append("|--------|:---:|------|")
+        for d in dormant:
+            md.append(f"| `{d['path']}` | {d.get('skills', 0)} | {d['reason']} |")
+
     md.append("\n---\n\n## 🚀 快速操作\n\n```bash")
     md.append("# 新电脑初始化\ngit clone --recurse-submodules https://github.com/ez-xu/skills-tree.git ~/.agents/skills\ncd ~/.agents/skills && bash _sync.sh")
     md.append("\n# 更新所有技能\ngit pull && git submodule update --remote --recursive && bash _sync.sh")
@@ -189,6 +291,8 @@ def main():
         f.write("\n".join(md) + "\n")
 
     log(f"  {GREEN}[OK]{NC} _tree.md 已生成")
+    if agent_missing:
+        log(f"\n{RED}⚠ 有 {len(agent_missing)} 条 Agent 链接不可达，见上面的 [X]{NC}")
     log(f"\n{GREEN}=== 同步完成! ==={NC}")
 
 if __name__ == "__main__":

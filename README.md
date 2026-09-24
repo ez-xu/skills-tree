@@ -1,17 +1,17 @@
 # 🌳 技能树
 
-> 统一管理 **90 个 Agent Skills** 的 Git 子模块树,通过 Junction 链接暴露给所有支持 Agent Skills 标准的运行时(Claude Code、DSH、Codex CLI、Gemini CLI 等)。
+> 统一管理 **77 个 Agent Skills** 的 Git 子模块树,通过 Junction 链接暴露给所有支持 Agent Skills 标准的运行时(Claude Code、DSH、Codex CLI、Gemini CLI 等)。
 > 每个技能源是独立的 git 子模块,技能本体由上游仓库维护,本仓库只管理**登记表**与**链接**。
 
 ## 这是什么
 
 - **格式**: [Agent Skills 开放标准](https://agentskills.io/specification)(`SKILL.md` + YAML frontmatter),一个文件夹即可安装到支持该标准的任意 Agent。
-- **技能存储位置**: 技能本体存放在 `_sources/<来源名>/`(git 子模块),根目录的 `two-way-steelman`、`codesize` 等目录是 **Windows Junction 链接**,指向 `_sources/` 里的真实技能目录。
-- **它解决什么**: 用一棵树管理 21 个技能源、90 个技能,每个源可独立更新、独立追踪版本,根目录链接自动同步。
+- **技能存储位置**: 技能本体存放在 `_sources/<来源名>/`(git 子模块),根目录的 `two-way-steelman`、`kicad` 等目录是 **Windows Junction 链接**,指向 `_sources/` 里的真实技能目录。
+- **它解决什么**: 用一棵树管理 18 个技能源、77 个技能,每个源可独立更新、独立追踪版本,根目录链接自动同步。
 
 ## 安装位置说明
 
-**根目录下的每个技能目录(如 `two-way-steelman/`、`codesize/`)都是一个 Junction 链接,指向 `_sources/` 下的真实目录。** Agent 扫描 `~/.agents/skills/` 时看到的是根目录链接,加载的是链接后的真实 `SKILL.md`。
+**根目录下的每个技能目录(如 `two-way-steelman/`、`kicad/`)都是一个 Junction 链接,指向 `_sources/` 下的真实目录。** Agent 扫描 `~/.agents/skills/` 时看到的是根目录链接,加载的是链接后的真实 `SKILL.md`。
 
 | 技能源 | 来源仓库 | 安装位置(子模块路径) | 技能数 |
 |--------|---------|---------------------|:---:|
@@ -19,11 +19,10 @@
 | kicad-happy | [aklofas/kicad-happy](https://github.com/aklofas/kicad-happy) | `_sources/kicad-happy/skills/` | 11 |
 | OfficeCLI | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | `_sources/OfficeCLI/skills/` | 10 |
 | superpowers | [obra/superpowers](https://github.com/obra/superpowers) | `_sources/superpowers/skills/` | 13 |
-| iart-ai 视频系列 | [iart-ai/tiktok-video-skills](https://github.com/iart-ai/tiktok-video-skills) 等 4 仓 | `_sources/*-video-skills/skills/` | 14 |
 | jinghan-xu-skills | [ez-xu/jinghan-xu-skills](https://github.com/ez-xu/jinghan-xu-skills) | `_sources/jinghan-xu-skills/skills/` | 4 |
 | orca | [stablyai/orca](https://github.com/stablyai/orca) | `_sources/orca/skills/` | 3 |
 | qt-agent-skills | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | `_sources/qt-agent-skills/skills/` | 2 |
-| claude-skills | [LiTianYun/claude-skills](https://github.com/LiTianYun/claude-skills) | `_sources/claude-skills/` | 2 |
+| claude-skills | [LiTianYun/claude-skills](https://github.com/LiTianYun/claude-skills) | `_sources/claude-skills/` | 1 |
 | hallmark | [nutlope/hallmark](https://github.com/nutlope/hallmark) | `_sources/hallmark/skills/hallmark/` | 1 |
 | easyeda-api | [easyeda/easyeda-api-skill](https://github.com/easyeda/easyeda-api-skill) | `_sources/easyeda-api-skill/` | 1 |
 | skill-forge | [nekocode/skill-forge](https://github.com/nekocode/skill-forge) | `_sources/skill-forge/skills/skill-forge/` | 1 |
@@ -33,7 +32,24 @@
 | push-release-pipeline | [ez-xu/push-release-pipeline-skill](https://github.com/ez-xu/push-release-pipeline-skill) | `_sources/push-release-pipeline-skill/`(SKILL.md 在仓库根) | 1 |
 | daily-dev-task | [ez-xu/daily-dev-task](https://github.com/ez-xu/daily-dev-task) | `_sources/daily-dev-task/`(SKILL.md 在仓库根) | 1 |
 | **two-way-steelman** | [chen1pengvincent/two-way-steelman](https://github.com/chen1pengvincent/two-way-steelman) | `_sources/two-way-steelman/`(SKILL.md 在仓库根) | 1 |
-| 其他(mattpocock、addyosmani 等) | — | `_sources/<name>/` | — |
+| agent-reach | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | `_sources/agent-reach/agent_reach/skill/` | 1 |
+| **合计** | **18 个源** | — | **77** |
+
+### 💤 保留但未注册的子模块
+
+以下 7 个仓库**留在 `_sources/` 里,但刻意不注册技能**——不建链接、不进任何 Agent 的上下文。这不是遗漏,是历次提交里明确写下的决定(提交信息原文:"保留 `_sources/<name>` 仓库")。需要启用时把它们移进 `_tree.json` 的 `sources` 并加入 `categories`,再跑一次 `python _sync.py`。
+
+| 子模块 | 可提供技能数 | 移除于 | 不注册的原因 |
+|--------|:---:|:---:|------|
+| `_sources/tiktok-video-skills` | 4 | `49cc6dc` | iart-ai 视频/动画包,随 5 个源整体移除注册 |
+| `_sources/text-message-video-skills` | 1 | `49cc6dc` | 同上 |
+| `_sources/data-animation-skills` | 3 | `49cc6dc` | 同上 |
+| `_sources/explainer-video-skills` | 5 | `49cc6dc` | 同上 |
+| `_sources/kinetic-typography-skills` | 1 | `49cc6dc` | 同上 |
+| `_sources/addyosmani-agent-skills` | 25 | `8af92a3` | 通用软件工程技能;其中 `test-driven-development` 与 superpowers 同名 |
+| `_sources/mattpocock-skills` | 37 | `90b7162` | 工程/写作技能,嵌套在 `skills/<分类>/<名>/` |
+
+> 这 7 个共可提供 **76 个技能**,与已注册的 77 个大致相当——本树是有取舍的,不是"装了多少就暴露多少"。
 
 ## 🆕 新电脑初始化
 
@@ -71,20 +87,20 @@ python _sync.py
 
 ```
 .agents/skills/                  # git clone 到此目录
-├── _sync.py                     # 一键创建 Junction + 校验(90 技能)
-├── _tree.json                   # 技能分类树定义(来源登记 + 分类)
+├── _sync.py                     # 一键创建 Junction + 校验(77 技能) + 同步各 Agent 目录
+├── _tree.json                   # 技能分类树定义(来源登记 + 分类 + 休眠名单)
 ├── _tree.md                     # 自动生成的可视化文档
-├── _sources/                    # 21 个 git 子模块(技能本体)
+├── _sources/                    # 25 个 git 子模块(技能本体,其中 7 个刻意未注册)
 │   ├── embed-ai-tool/           # LeoKemp223/embed-ai-tool (23 技能)
 │   ├── kicad-happy/             # aklofas/kicad-happy (11 技能)
 │   ├── OfficeCLI/               # iOfficeAI/OfficeCLI (10 技能)
 │   ├── superpowers/             # obra/superpowers (13 技能)
 │   ├── two-way-steelman/        # chen1pengvincent/two-way-steelman (1 技能)
-│   └── ...                      # 其余 16 个子模块
+│   └── ...                      # 其余 20 个子模块
 │
 ├── two-way-steelman ──┐
-├── codesize           ├── 90 个 Junction → _sources/*/skills/* 或 _sources/*/
-├── kicad              │   (由 _sync.py 创建,不纳入 git)
+├── kicad              ├── 78 个 Junction → _sources/*/skills/* 或 _sources/*/
+├── shared             │   (由 _sync.py 创建,不纳入 git)
 └── ...               ──┘
 ```
 
@@ -95,6 +111,7 @@ python _sync.py
 | 添加外部技能源 | `git submodule add <url> _sources/<name>` + 登记到 `_tree.json` |
 | 更新单个子模块 | `cd _sources/<name> && git pull` |
 | 重建所有链接 | `python _sync.py` |
+| 同步各 Agent 的 skills 目录 | `python _sync.py` 默认一并执行(`--no-agents` 可跳过,只重建根目录链接) |
 | 查看完整树 | `cat _tree.md` |
 
 ---
@@ -105,6 +122,12 @@ python _sync.py
 
 ### 2026-09-24
 
+- **fix**: 校准全部数字口径——README 原写「90 技能 / 21 源」,实为 **77 技能 / 18 源 / 25 子模块 / 78 Junction**。原 90 恰好等于表格各行求和(含早已移除的 iart-ai 14 技能),现将该行移入休眠名单、补上漏登的 `agent-reach`、`claude-skills` 由 2 改 1(`README.md`)
+- **fix**: 移除 README 中对**不存在**的 `codesize` 的引用(3 处),改为真实存在的 `kicad`(`README.md`)
+- **feat**: `_tree.json` 新增 `dormant` 名单,把 7 个「保留仓库但刻意不注册」的子模块(共 76 技能:iart-ai×5 = 14、addyosmani 25、mattpocock 37)连同移除提交号写入登记表,并由 `_sync.py` 渲染进 `_tree.md`。此前这层决定只存在于提交信息里,文档上看起来像遗漏(`_tree.json`、`_sync.py`)
+- **fix**: `drama-forge` 补进分类(新建「🎬 视频 / 动画」)。它此前已注册却不属于任何分类,导致 `_tree.md` 概览表的分类求和(76)与合计(77)差 1(`_tree.json`)
+- **fix**: `.gitmodules` 删除死声明 `[submodule "easyeda-api"]`(`path = easyeda-api`)。该路径既无 gitlink 也无目录,真正的源是 `_sources/easyeda-api-skill`(`.gitmodules`)
+- **feat**: `_sync.py` 新增「同步各 Agent 链接」步骤(**只增不删**)。Codex 的技能链接是手工逐条建的、无人维护,已积累 **4 条断链 + 34 条缺失**(`daily-dev-task`、`push-release-pipeline-skill`、`easyeda-api` 等注册后从未出现在 Codex 中)。现在:整目录 Junction 的 Agent 自动跳过、真实目录(Codex 须与自带 `.system/` 共存)逐条补齐、断链自动重建(`_sync.py`)
 - **feat**: 注册 daily-dev-task 每日练习教练技能(新建独立仓库 [ez-xu/daily-dev-task](https://github.com/ez-xu/daily-dev-task),SKILL.md 在仓库根,`tree`、`gitignore`、`gitmodules`)。同时把根目录下的**实体目录**提为子模块 + Junction,补上漏走的登记流程;硬编码的 `C:\Users\15854\ai-lab` 参数化为 `%USERPROFILE%\ai-lab`(18 处)。新增「🎯 每日练习」分类
 
 ### 2026-09-23

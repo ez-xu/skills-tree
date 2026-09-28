@@ -211,10 +211,10 @@
       ]
     },
     {
-      "name": "daily-dev-task",
-      "remote": "https://github.com/ez-xu/daily-dev-task.git",
-      "path": "_sources/daily-dev-task",
-      "skills_dir": ".",
+      "name": "ai-lab",
+      "remote": "https://github.com/ez-xu/ai-lab.git",
+      "path": "_sources/ai-lab",
+      "skills_dir": "skill",
       "skills": [
         "daily-dev-task"
       ]

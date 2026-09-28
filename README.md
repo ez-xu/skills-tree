@@ -119,6 +119,11 @@ python _sync.py
 
 <!-- 新条目添加在最上方 -->
 
+### 2026-09-28
+
+- **feat**: `daily-dev-task` 技能改由 [ez-xu/ai-lab](https://github.com/ez-xu/ai-lab) 提供——子模块由 `_sources/daily-dev-task` 换成 `_sources/ai-lab`,源名由 `daily-dev-task` 改为 `ai-lab`,`_tree.json` 的 `skills_dir` 指向 `skill`。技能名、Junction 名 `daily-dev-task`(现指向 `_sources/ai-lab/skill`)与 `.gitignore` 里那行 junction 模式 `daily-dev-task` **都保持不变**,所以各 Agent 的链接不需要重建,计数仍是 17 源 / 76 技能。原独立仓库 [ez-xu/daily-dev-task](https://github.com/ez-xu/daily-dev-task) 已归档(技能本体今后随每日两题引擎一起维护)(`.gitmodules`、`_tree.json`)
+- **docs**: README 来源表与 `.gitignore` 注释一并改指 `ez-xu/ai-lab`。来源表此前仍写「新建独立仓库 ez-xu/daily-dev-task,SKILL.md 在仓库根」,与 `_tree.json` 的 `skills_dir: "skill"` 对不上(`README.md`、`.gitignore`)
+
 ### 2026-09-24
 
 - **fix**: 移除 `_sources/claude-skills` 子模块。上游 `LiTianYun/claude-skills` 已 **404**(仓库被删或转私有),导致 README 的「新电脑初始化」(`git clone --recurse-submodules`)**在别人的新机器上直接中断**——25 个子模块里只有它是死的。一并移除它唯一的技能 `project-diff 工程变更比对`,并清掉根目录与 Codex 里的死链(`gitmodules`、`tree`、`gitignore`、`README.md`)。删除前已把 10.72 MB / 475 个文件完整归档到 `~/.agents/_archive/claude-skills-20260924/`(含 `.git`,可 `git log`):上游已消失,这份是本机仅存副本

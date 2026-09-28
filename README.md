@@ -29,7 +29,7 @@
 | baidupan | [ez-xu/baidupan](https://github.com/ez-xu/baidupan) | `_sources/baidupan/` | 1 |
 | drama-forge | [ez-xu/drama-forge](https://github.com/ez-xu/drama-forge) | `_sources/minimax-video-pipeline-skill/` | 1 |
 | push-release-pipeline | [ez-xu/push-release-pipeline-skill](https://github.com/ez-xu/push-release-pipeline-skill) | `_sources/push-release-pipeline-skill/`(SKILL.md 在仓库根) | 1 |
-| daily-dev-task | [ez-xu/daily-dev-task](https://github.com/ez-xu/daily-dev-task) | `_sources/daily-dev-task/`(SKILL.md 在仓库根) | 1 |
+| daily-dev-task | [ez-xu/ai-lab](https://github.com/ez-xu/ai-lab) | `_sources/ai-lab/skill/` | 1 |
 | **two-way-steelman** | [chen1pengvincent/two-way-steelman](https://github.com/chen1pengvincent/two-way-steelman) | `_sources/two-way-steelman/`(SKILL.md 在仓库根) | 1 |
 | agent-reach | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | `_sources/agent-reach/agent_reach/skill/` | 1 |
 | **合计** | **17 个源** | — | **76** |

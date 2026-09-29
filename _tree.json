@@ -68,17 +68,6 @@
       ]
     },
     {
-      "name": "orca",
-      "remote": "https://github.com/stablyai/orca.git",
-      "path": "_sources/orca",
-      "skills_dir": "skills",
-      "skills": [
-        "computer-use",
-        "orca-cli",
-        "orchestration"
-      ]
-    },
-    {
       "name": "OfficeCLI",
       "remote": "https://github.com/iOfficeAI/OfficeCLI.git",
       "path": "_sources/OfficeCLI",
@@ -349,10 +338,7 @@
       "label": "🛠️ 基础设施",
       "skills": [
         "skill-forge",
-        "agent-skill-creator",
-        "computer-use",
-        "orca-cli",
-        "orchestration"
+        "agent-skill-creator"
       ]
     },
     "superpowers": {

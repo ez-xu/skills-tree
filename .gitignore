@@ -59,11 +59,6 @@ static-analysis
 visa-debug
 workflow
 
-# orca 系列 → _sources/orca/skills
-computer-use
-orca-cli
-orchestration
-
 # Qt 系列 → _sources/qt-agent-skills/skills
 qt-cpp-review
 qt-ui-design

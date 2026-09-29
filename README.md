@@ -1,13 +1,13 @@
 # 🌳 技能树
 
-> 统一管理 **76 个 Agent Skills** 的 Git 子模块树,通过 Junction 链接暴露给所有支持 Agent Skills 标准的运行时(Claude Code、DSH、Codex CLI、Gemini CLI 等)。
+> 统一管理 **73 个 Agent Skills** 的 Git 子模块树,通过 Junction 链接暴露给所有支持 Agent Skills 标准的运行时(Claude Code、DSH、Codex CLI、Gemini CLI 等)。
 > 每个技能源是独立的 git 子模块,技能本体由上游仓库维护,本仓库只管理**登记表**与**链接**。
 
 ## 这是什么
 
 - **格式**: [Agent Skills 开放标准](https://agentskills.io/specification)(`SKILL.md` + YAML frontmatter),一个文件夹即可安装到支持该标准的任意 Agent。
 - **技能存储位置**: 技能本体存放在 `_sources/<来源名>/`(git 子模块),根目录的 `two-way-steelman`、`kicad` 等目录是 **Windows Junction 链接**,指向 `_sources/` 里的真实技能目录。
-- **它解决什么**: 用一棵树管理 17 个技能源、76 个技能,每个源可独立更新、独立追踪版本,根目录链接自动同步。
+- **它解决什么**: 用一棵树管理 16 个技能源、73 个技能,每个源可独立更新、独立追踪版本,根目录链接自动同步。
 
 ## 安装位置说明
 
@@ -20,7 +20,6 @@
 | OfficeCLI | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | `_sources/OfficeCLI/skills/` | 10 |
 | superpowers | [obra/superpowers](https://github.com/obra/superpowers) | `_sources/superpowers/skills/` | 13 |
 | jinghan-xu-skills | [ez-xu/jinghan-xu-skills](https://github.com/ez-xu/jinghan-xu-skills) | `_sources/jinghan-xu-skills/skills/` | 4 |
-| orca | [stablyai/orca](https://github.com/stablyai/orca) | `_sources/orca/skills/` | 3 |
 | qt-agent-skills | [TheQtCompanyRnD/agent-skills](https://github.com/TheQtCompanyRnD/agent-skills) | `_sources/qt-agent-skills/skills/` | 2 |
 | hallmark | [nutlope/hallmark](https://github.com/nutlope/hallmark) | `_sources/hallmark/skills/hallmark/` | 1 |
 | easyeda-api | [easyeda/easyeda-api-skill](https://github.com/easyeda/easyeda-api-skill) | `_sources/easyeda-api-skill/` | 1 |
@@ -32,7 +31,7 @@
 | daily-dev-task | [ez-xu/ai-lab](https://github.com/ez-xu/ai-lab) | `_sources/ai-lab/skill/` | 1 |
 | **two-way-steelman** | [chen1pengvincent/two-way-steelman](https://github.com/chen1pengvincent/two-way-steelman) | `_sources/two-way-steelman/`(SKILL.md 在仓库根) | 1 |
 | agent-reach | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | `_sources/agent-reach/agent_reach/skill/` | 1 |
-| **合计** | **17 个源** | — | **76** |
+| **合计** | **16 个源** | — | **73** |
 
 ### 💤 保留但未注册的子模块
 
@@ -48,7 +47,7 @@
 | `_sources/addyosmani-agent-skills` | 25 | `8af92a3` | 通用软件工程技能;其中 `test-driven-development` 与 superpowers 同名 |
 | `_sources/mattpocock-skills` | 37 | `90b7162` | 工程/写作技能,嵌套在 `skills/<分类>/<名>/` |
 
-> 这 7 个共可提供 **76 个技能**,与已注册的 76 个大致相当——本树是有取舍的,不是"装了多少就暴露多少"。
+> 这 7 个共可提供 **76 个技能**,与已注册的 73 个大致相当——本树是有取舍的,不是"装了多少就暴露多少"。
 
 ## 🆕 新电脑初始化
 
@@ -86,19 +85,19 @@ python _sync.py
 
 ```
 .agents/skills/                  # git clone 到此目录
-├── _sync.py                     # 一键创建 Junction + 校验(76 技能) + 同步各 Agent 目录
+├── _sync.py                     # 一键创建 Junction + 校验(73 技能) + 同步各 Agent 目录
 ├── _tree.json                   # 技能分类树定义(来源登记 + 分类 + 休眠名单)
 ├── _tree.md                     # 自动生成的可视化文档
-├── _sources/                    # 24 个 git 子模块(技能本体,其中 7 个刻意未注册)
+├── _sources/                    # 23 个 git 子模块(技能本体,其中 7 个刻意未注册)
 │   ├── embed-ai-tool/           # LeoKemp223/embed-ai-tool (23 技能)
 │   ├── kicad-happy/             # aklofas/kicad-happy (11 技能)
 │   ├── OfficeCLI/               # iOfficeAI/OfficeCLI (10 技能)
 │   ├── superpowers/             # obra/superpowers (13 技能)
 │   ├── two-way-steelman/        # chen1pengvincent/two-way-steelman (1 技能)
-│   └── ...                      # 其余 19 个子模块
+│   └── ...                      # 其余 18 个子模块
 │
 ├── two-way-steelman ──┐
-├── kicad              ├── 77 个 Junction → _sources/*/skills/* 或 _sources/*/
+├── kicad              ├── 74 个 Junction → _sources/*/skills/* 或 _sources/*/
 ├── shared             │   (由 _sync.py 创建,不纳入 git)
 └── ...               ──┘
 ```
@@ -118,6 +117,10 @@ python _sync.py
 ## 变更日志
 
 <!-- 新条目添加在最上方 -->
+
+### 2026-09-29
+
+- **chore**: 卸载 orca 技能源(第三方上游 [stablyai/orca](https://github.com/stablyai/orca))——移除子模块 `_sources/orca` 与其提供的 3 个技能 `computer-use`、`orca-cli`、`orchestration`,清掉根目录对应 3 条 Junction 与全部登记,计数由 17 源 / 76 技能降为 16 源 / 73 技能(`.gitmodules`、`_tree.json`、`.gitignore`、`README.md`)
 
 ### 2026-09-28
 

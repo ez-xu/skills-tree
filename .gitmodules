@@ -14,10 +14,6 @@
 	path = _sources/embed-ai-tool
 	url = https://github.com/LeoKemp223/embed-ai-tool.git
 	branch = master
-[submodule "_sources/orca"]
-	path = _sources/orca
-	url = https://github.com/stablyai/orca.git
-	branch = main
 [submodule "_sources/qt-agent-skills"]
 	path = _sources/qt-agent-skills
 	url = https://github.com/TheQtCompanyRnD/agent-skills.git

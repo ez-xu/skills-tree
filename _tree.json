@@ -198,15 +198,6 @@
       "skills": [
         "push-release-pipeline-skill"
       ]
-    },
-    {
-      "name": "ai-lab",
-      "remote": "https://github.com/ez-xu/ai-lab.git",
-      "path": "_sources/ai-lab",
-      "skills_dir": "skill",
-      "skills": [
-        "daily-dev-task"
-      ]
     }
   ],
   "dormant": [
@@ -375,12 +366,6 @@
       "label": "🌐 互联网调研",
       "skills": [
         "agent-reach"
-      ]
-    },
-    "practice": {
-      "label": "🎯 每日练习",
-      "skills": [
-        "daily-dev-task"
       ]
     },
     "video": {

@@ -118,6 +118,9 @@ agent-reach
 # ez-xu/push-release-pipeline-skill → _sources/push-release-pipeline-skill (SKILL.md 在仓库根)
 push-release-pipeline-skill
 
+# ez-xu/release-it-skill → _sources/release-it-skill (SKILL.md 在仓库根)
+release-it-skill
+
 # ez-xu/ai-lab → _sources/ai-lab/skill
 daily-dev-task
 

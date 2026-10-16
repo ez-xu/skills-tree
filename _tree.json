@@ -198,6 +198,15 @@
       "skills": [
         "push-release-pipeline-skill"
       ]
+    },
+    {
+      "name": "release-it",
+      "remote": "https://github.com/ez-xu/release-it-skill.git",
+      "path": "_sources/release-it-skill",
+      "skills_dir": ".",
+      "skills": [
+        "release-it-skill"
+      ]
     }
   ],
   "dormant": [
@@ -322,7 +331,8 @@
         "qt-cpp-review",
         "qt-ui-design",
         "hallmark",
-        "push-release-pipeline-skill"
+        "push-release-pipeline-skill",
+        "release-it-skill"
       ]
     },
     "infra": {

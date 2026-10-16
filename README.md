@@ -28,10 +28,13 @@
 | baidupan | [ez-xu/baidupan](https://github.com/ez-xu/baidupan) | `_sources/baidupan/` | 1 |
 | drama-forge | [ez-xu/drama-forge](https://github.com/ez-xu/drama-forge) | `_sources/minimax-video-pipeline-skill/` | 1 |
 | push-release-pipeline | [ez-xu/push-release-pipeline-skill](https://github.com/ez-xu/push-release-pipeline-skill) | `_sources/push-release-pipeline-skill/`(SKILL.md 在仓库根) | 1 |
+| release-it | [ez-xu/release-it-skill](https://github.com/ez-xu/release-it-skill) | `_sources/release-it-skill/`(SKILL.md 在仓库根) | 1 |
 | daily-dev-task | [ez-xu/ai-lab](https://github.com/ez-xu/ai-lab) | `_sources/ai-lab/skill/` | 1 |
 | **two-way-steelman** | [chen1pengvincent/two-way-steelman](https://github.com/chen1pengvincent/two-way-steelman) | `_sources/two-way-steelman/`(SKILL.md 在仓库根) | 1 |
 | agent-reach | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | `_sources/agent-reach/agent_reach/skill/` | 1 |
-| **合计** | **16 个源** | — | **73** |
+| **合计** | **17 个源** | — | **74** |
+
+> 注：`daily-dev-task`(ai-lab)列在上表中,但 `_tree.json` 的 `sources` 并未登记它,根目录也没有对应 Junction——它当前**不在**技能树里。`_sync.py` 实际校验通过的注册数为 **16 源 / 73 技能**(含 `release-it-skill`,不含 `daily-dev-task`)。
 
 ### 💤 保留但未注册的子模块
 
@@ -117,6 +120,10 @@ python _sync.py
 ## 变更日志
 
 <!-- 新条目添加在最上方 -->
+
+### 2026-10-16
+
+- **feat**: 注册 release-it-skill 发布技能(新建独立仓库 [ez-xu/release-it-skill](https://github.com/ez-xu/release-it-skill),SKILL.md 在仓库根,`tree`、`gitignore`、`gitmodules`、`README.md`)——用 release-it 21.1.1 一次完成"标签 + 发布(含发布说明)+ 软件包 + 链接"四件交付物并互相读回印证,无法自证时拒绝发布,归入「🔧 研发协作」分类
 
 ### 2026-09-29
 
